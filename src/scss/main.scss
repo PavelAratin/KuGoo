@@ -1,0 +1,13 @@
+.red{
+  color: green;
+  &__item{
+    color: red;
+    &__lik{
+      display: block;
+    }
+  }
+}
+body{
+  color: red;
+}
+@import 'second';
