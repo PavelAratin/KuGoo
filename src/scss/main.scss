@@ -1,13 +1,9 @@
-.red{
-  color: green;
-  &__item{
-    color: red;
-    &__lik{
-      display: block;
-    }
-  }
-}
-body{
-  color: red;
-}
+//пример импорта scss файла
 @import 'second';
+body{
+  height: 100vh;
+  background-image: url('../img/gulp-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
