@@ -1,3 +1,3 @@
-export function abc(){
-  console.log('Покдлючили тестовый модуль')
+export let abc = () =>{
+  console.logg('Покдлючили тестовый модуль')
 }

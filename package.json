@@ -1,7 +1,6 @@
 {
-  "name": "mygulp",
+  "name": "y",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,5 +30,14 @@
   },
   "dependencies": {
     "gulp-tinypng-compress": "^1.2.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelAratin/myGulp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PavelAratin/myGulp/issues"
+  },
+  "homepage": "https://github.com/PavelAratin/myGulp#readme",
+  "description": ""
 }

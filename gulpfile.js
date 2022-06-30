@@ -73,9 +73,11 @@ const clean = () => {
 const scipts = () => {
   return src('./src/js/main.js')
     .pipe(webpackStream({
+      mode: 'development',//режим разработки
       output: {
         filename: 'main.js',
       },
+      devtool: 'source-map',//карта проетк(из каких кусочков состоит)
       module: {
         rules: [
           {
@@ -85,7 +87,9 @@ const scipts = () => {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  ['@babel/preset-env', { targets: "defaults" }]
+                  ['@babel/preset-env', {
+                    debug: true,//вывод ошибок в консоль
+                  }]
                 ]
               }
             }
