@@ -102,6 +102,12 @@ const scipts = () => {
     .pipe(dest('./app/js'))
     .pipe(browserSync.stream());
 }
+//добавление сверх начальной сборки необходимых функций начало
+const normalizeToApp = () =>{
+  return src('./src/normalize/normalize.css')
+  .pipe(dest('./app/css'))
+}
+//добавление сверх начальной сборки необходимых функций конец
 
 //функция для слежения за файлами 
 const watchFiles = () => {
@@ -127,14 +133,16 @@ exports.fileInclude = htmlInclude;
 exports.fonts = fonts;
 exports.clean = clean;
 exports.watchFiles = watchFiles;
+exports.normalizeToApp = normalizeToApp;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts, fonts, imgToApp, svgSprites), styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts, fonts, imgToApp, svgSprites), styles,normalizeToApp, watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
   return src('./src/js/main.js')
     .pipe(webpackStream({
+      mode: 'production',//режим разработки
       output: {
         filename: 'main.js',
       },
@@ -178,4 +186,4 @@ const tinypng = () => {
     .pipe(dest('./app/img'))
 }
 //dev-сборка
-exports.build = series(clean, parallel(htmlInclude, sciptsBuild, fonts, imgToApp, svgSprites), stylesBuild, tinypng);
+exports.build = series(clean, parallel(htmlInclude, sciptsBuild, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);
