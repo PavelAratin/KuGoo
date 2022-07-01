@@ -1,0 +1,398 @@
+.header{
+  padding-bottom: 31px;
+  &__top{
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+  }
+  &__item-top:not(:last-child){
+    margin-right: 30px;
+  }
+  &__item-top:not(:last-child){
+    margin-right: 30px;
+  }
+  &__list-top{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
+  &__link-top{
+    color: $colorGrey600;
+    font-size: 12px;
+    position: relative;
+    display: block;
+    transition: color 0.2s linear;
+    &::before{
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      bottom: -3px;
+      right: -3px;
+      background-color: $colorLavanda;
+      transform: scale(0);
+      transition: transform 0.2s linear;
+    }
+    &:focus::before{
+      transform: scale(1);
+    }
+    span{
+      position: relative;
+    }
+    &:hover{
+      color: $colorPurple;
+    }
+  }
+  &__middle{
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+  }
+  &__bottom{
+    position: relative;
+    z-index: 2;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100vw;
+      height: 150%;
+      margin-left: calc(50% - 50vw);
+      background-color: $colorLavanda;
+      z-index: -1;
+      top: -6px;
+    }
+  }
+  &__tel{
+    font-weight: 500;
+    font-size: 12px;
+    color: $colorBlack;
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    position: relative;
+    transition: color 0.2s linear;
+    svg{
+      width: 12px;
+      height: 12px;
+      margin-left: 9px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      bottom: -3px;
+      right: -3px;
+      background-color: $colorLavanda;
+      transform: scale(0);
+      transition: transform 0.2s linear;
+    }
+    &:focus::before{
+      transform: scale(1);
+    }
+    span{
+      position: relative;
+    }
+    svg{
+      position: relative;
+      transition: transform 0.2s linear;
+    }
+    &:hover{
+      color: $colorPurple;
+    }
+    &:hover svg{
+      transform: rotate(45deg);
+    }
+  }
+}
+.social-list{
+  display: flex;
+  align-items: center;
+  &__item{
+    margin-right: 9px;
+  }
+  &__svg{
+    width: 12px;
+    height: 12px;
+    fill: $colorGrey600;
+    transition: fill 0.2s linear;
+    &--call:hover{
+      fill: $colorPurple;
+    }
+    &--whatsapp:hover{
+      fill: $colorYellowGreen;
+    }
+    &--telegram:hover{
+      fill: $colorAspidBlue;
+    }
+  }
+  &__link:focus .social-list__svg--call{
+    fill: $colorPurple;
+  }
+  &__link:focus .social-list__svg--whatsapp{
+    fill: $colorYellowGreen;
+  }
+  &__link:focus .social-list__svg--telegram{
+    fill: $colorAspidBlue;
+  }
+}
+.logo{
+  font-weight: 700;
+  font-size: 30px;
+  color: $colorBlack;
+  &--header{
+    margin-right: 30px;
+  }
+
+}
+.search-form{
+  display: flex;
+  align-items: center;
+}
+.button-catalog{
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: $colorPurple;
+  font-weight: 500;
+  font-size: 16px;
+  color: $colorWhite;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s linear;
+  &--header{
+    margin-right: 20px;
+  }
+  &:hover,
+  &:focus{
+    background-color: $colorBlueHover;
+  }
+}
+.burger{
+  width: 13px;
+  height: 12px;
+  position: relative;
+  &--header{
+    margin-right: 13px;
+  }
+  &__line{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: $colorWhite;
+    border-radius: 5px;
+    &--top{
+      top: 0;
+      left: 0;
+    }
+    &--middle{
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &--bottom{
+      width: 50%;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+.search-form{
+  width: 600px;
+  border-radius: 5px;
+  padding: 5px;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(111, 115, 238, 1) inset;
+  -moz-box-shadow: 0px 0px 0px 2px rgba(111, 115, 238, 1) inset;
+  box-shadow: 0px 0px 0px 2px rgba(111, 115, 238, 1) inset;
+  position: relative;
+  cursor: pointer;
+  &__input{
+    width: 200px;
+    border: none;
+    outline: none;
+  }
+  &__button{
+    background-color: $colorPurple;
+    background-image: url('../img/search-form-white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    position: absolute;
+    right: -1px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s linear;
+    &:hover{
+      background-color: $colorBlueHover;
+    }
+    &:focus{
+      -webkit-box-shadow: 0px 0px 0px 2px rgb(36, 39, 125) inset;
+      -moz-box-shadow: 0px 0px 0px 2px rgba(36, 39, 125) inset;
+      box-shadow: 0px 0px 0px 2px rgba(36, 39, 125) inset;
+    }
+  }
+  &__select{
+    min-width: 110px;  
+    border-radius: 5px;
+    margin-right: 20px;
+    .choices__inner{
+      background: $colorLavanda;
+      border: none;
+      min-height: 32px;
+    }
+    .choices__list--dropdown .choices__item--selectable.is-highlighted,
+    .choices__list[aria-expanded] .choices__item--selectable.is-highlighted{
+      background: transparent;
+      color: $colorPurple;
+    }
+    &:focus .choices__inner{
+      -webkit-box-shadow: 0px 0px 0px 2px rgba(111, 115, 238, 1) inset;
+      -moz-box-shadow: 0px 0px 0px 2px rgba(111, 115, 238, 1) inset;
+      box-shadow: 0px 0px 0px 2px rgba(111, 115, 238, 1) inset;
+      border-radius: 5px;
+    }
+  }
+  .choices__list--dropdown{
+    min-width: 150px;
+    border-radius: 5px;
+    background: $colorLavanda;
+    padding: 14px;
+    top: 45px;
+    margin-top: 0;
+    border: none;
+    left: -2px;
+  }
+}
+.choices{
+  margin-bottom: 0;
+}
+.choices.search-form__select[data-type*=select-one]::after{
+  width: 7px;
+  height: 7px;
+  border: none;
+  right: 10px;
+  margin-top: 0;
+  top: 17px;
+  background: url('../img/choice-arrow-down-black.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.choices.search-form__select.is-open[data-type*=select-one]::after{
+  transform: rotate(180deg);
+}
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable{
+  padding-right: 0;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after{
+  display: none;
+}
+.actions-user{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  &__item:not(:last-child){
+    margin-right: 7px;
+  }
+  &__link{
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 100px;
+    display: block;
+    transition: background 0.2s linear , color 0.2s linear;
+    &--cart{
+      display: flex;
+      align-items: center;
+      color: $colorBlack;
+      font-weight: 500;
+    }
+    &:hover{
+      background-color: $colorLavanda;
+      color: $colorBlueHover;
+    }
+    &:focus{
+      background-color: $colorLavanda;
+    }
+  }
+  &__link-text{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__link-text--ves{
+    background-image: url('../img/ves-black.svg');
+    &:hover{
+      background-image: url('../img/ves-blue.svg');
+    }
+  }
+  &__link-text--heart{
+    background-image: url('../img/heart-black.svg');
+    &:hover{
+      background-image: url('../img/heart-blue.svg');
+    }
+  }
+  &__link-text--cart{
+    margin-right: 10px;
+    background-image: url('../img/cart-blue.svg');
+  }
+}
+.nav-list{
+  display: flex;
+  align-items: center;
+  &__item:not(:last-child){
+    margin-right: 50px;
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      left: -3px;
+      background-color: $colorPurple;
+      transform: scale(0);
+      transition: transform 0.2s linear;
+    }
+    &:focus::before{
+      transform: scale(1);
+    }
+    &:focus .nav-list__link-text{
+      color: $colorWhite;
+    }
+    &:focus .nav-list__value{
+      border: 1px solid $colorWhite;
+    }
+  }
+  &__link-text{
+    color: $colorBlack;
+    font-weight: 500;
+    transition: color 0.2s linear;
+    position: relative;
+    &--value{
+      margin-right: 10px;
+    }
+    &:hover{
+      color: $colorPurple;
+    }
+  }
+  &__value{
+    padding: 5px 8px 4px 8px;
+    background-color: $colorPurple;
+    border-radius: 300px;
+    color: $colorWhite;
+    position: relative;
+    border: 1px solid transparent;
+  }
+}

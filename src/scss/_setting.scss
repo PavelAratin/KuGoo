@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 body{
+  font-family: 'Jost',sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
@@ -18,8 +20,35 @@ p{
 img{
   display: block;
 }
+input[type=text]::-ms-clear { 
+  display: none; 
+  width : 0; 
+  height: 0;
+ }
+input[type=text]::-ms-reveal { 
+  display: none;
+  width : 0;
+  height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
 .container{
   max-width: 1360px;
   padding: 0 20px;
   margin: 0 auto;
+}
+.list{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.link,
+.tel{
+  display: block;
+  text-decoration: none;
+  outline: none;
 }

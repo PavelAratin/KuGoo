@@ -51,7 +51,7 @@ const styles = () => {
 
 //функция для работы с html
 const htmlInclude = () => {
-  return src(['./src/index.html'])
+  return src(['./src/*.html'])
     .pipe(fileInclude({
       prefix: '@',
       basepath: '@file'
@@ -61,7 +61,7 @@ const htmlInclude = () => {
 }
 //простая перегонка картинок для dev-версии (в процессе разработки)
 const imgToApp = () => {
-  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg'])
+  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg','./src/img/**.svg'])
     .pipe(dest('./app/img'))
 }
 //функция для удаления папки app
@@ -107,6 +107,10 @@ const normalizeToApp = () =>{
   return src('./src/normalize/normalize.css')
   .pipe(dest('./app/css'))
 }
+const joicesToApp = ()=>{
+  return src('./src/joices/*')
+  .pipe(dest('./app/joices/'))
+}
 //добавление сверх начальной сборки необходимых функций конец
 
 //функция для слежения за файлами 
@@ -118,7 +122,8 @@ const watchFiles = () => {
   });
   //watch - дефолтный метод галпа
   watch('./src/scss/**/*.scss', styles);//как только будут изменения в стилях, вызовется функция styles
-  watch('./src/index.html', htmlInclude);
+  watch('./src/htmlPartials/*.html', htmlInclude);
+  watch('./src/*.html', htmlInclude);
   watch('./src/img**.jpg', imgToApp);
   watch('./src/img**.png', imgToApp);
   watch('./src/img**.jpeg', imgToApp);
@@ -134,9 +139,10 @@ exports.fonts = fonts;
 exports.clean = clean;
 exports.watchFiles = watchFiles;
 exports.normalizeToApp = normalizeToApp;
+exports.joicesToApp = joicesToApp;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts, fonts, imgToApp, svgSprites), styles,normalizeToApp, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts,joicesToApp, fonts, imgToApp, svgSprites), styles,normalizeToApp, watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
@@ -186,4 +192,4 @@ const tinypng = () => {
     .pipe(dest('./app/img'))
 }
 //dev-сборка
-exports.build = series(clean, parallel(htmlInclude, sciptsBuild, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);
+exports.build = series(clean, parallel(htmlInclude, sciptsBuild,joicesToApp, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);

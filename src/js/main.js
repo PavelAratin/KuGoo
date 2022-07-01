@@ -1,2 +1,2 @@
-import { abc } from "./func";
-abc();
+import { joicesCustome } from "./joicesCustome";
+joicesCustome();
