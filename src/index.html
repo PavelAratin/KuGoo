@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./joices/choices.min.css">
+  <link rel="stylesheet" href="./swiper/swiper.min.css">
   <link rel="stylesheet" href="./css/main.css">
   <title>KuGoo</title>
-  <script src="./joices/choices.min.js"></script>
+  <script defer src="./swiper/swiper.min.js"></script>
+  <script defer src="./joices/choices.min.js"></script>
   <script defer src="./js/main.js"></script>
 </head>
 <body>
   @include('htmlPartials/header.html')
+ <main>
+  @include('htmlPartials/heroSwiper.html')
+  @include('htmlPartials/infoBlog.html')
+ </main>
 </body>
 </html>

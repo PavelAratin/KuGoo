@@ -1,0 +1,56 @@
+.info-block{
+  padding: 39px 0 81px 0;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+  }
+  &__line{
+    width: fit-content;
+    &--warranty{
+      margin-right: 78px;
+    }
+    &--installment{
+      margin-right: 134px;
+    }
+    &--reviews{
+      border-radius: 5px;
+      border: 1px solid $colorWhiteSnow;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-left: auto;
+    }
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 25px;
+    color: $colorBlack;
+    margin-bottom: 10px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    color: $colorBlack;
+  }
+  &__svg{
+    width: 56px;
+    height: 56px;
+    margin-right: 18px;
+    -webkit-box-shadow: 0px 56px 99px -39px rgba(252, 63, 29, 1);
+    -moz-box-shadow: 0px 56px 99px -39px rgba(252, 63, 29, 1);
+    box-shadow: 0px 56px 99px -39px rgba(252, 63, 29, 1);
+  }
+  &__reviews-jandex{
+    font-size: 12px;
+    color: $colorGrey600;
+    margin-bottom: 5px;
+  }
+  &__grade{
+    font-weight: 600;
+    font-size: 25px;
+    color: $colorBlack;
+    padding-left: 19px;
+    background-image: url('../img/star-yellow.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}

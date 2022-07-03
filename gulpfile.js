@@ -111,6 +111,10 @@ const joicesToApp = ()=>{
   return src('./src/joices/*')
   .pipe(dest('./app/joices/'))
 }
+const swiperToApp = () =>{
+  return src('./src/swiper/*')
+  .pipe(dest('./app/swiper'))
+}
 //добавление сверх начальной сборки необходимых функций конец
 
 //функция для слежения за файлами 
@@ -140,9 +144,10 @@ exports.clean = clean;
 exports.watchFiles = watchFiles;
 exports.normalizeToApp = normalizeToApp;
 exports.joicesToApp = joicesToApp;
+exports.swiperToApp = swiperToApp;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts,joicesToApp, fonts, imgToApp, svgSprites), styles,normalizeToApp, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts,joicesToApp,swiperToApp, fonts, imgToApp, svgSprites), styles,normalizeToApp, watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
@@ -192,4 +197,4 @@ const tinypng = () => {
     .pipe(dest('./app/img'))
 }
 //dev-сборка
-exports.build = series(clean, parallel(htmlInclude, sciptsBuild,joicesToApp, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);
+exports.build = series(clean, parallel(htmlInclude, sciptsBuild,swiperToApp,joicesToApp, fonts, imgToApp, svgSprites), stylesBuild,normalizeToApp, tinypng);
