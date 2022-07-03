@@ -1,0 +1,49 @@
+.product-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(255px,1fr));
+  grid-gap: 30px;
+  border-radius: 5px;
+  &__imgbox{
+    position: relative;
+  }
+  &__img{
+    width: 100%;
+  }
+  &__shield{
+    font-weight: 500;
+    font-size: 12px;
+    color: $colorWhite;
+    padding: 6px 9px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    &--red{
+      background-color: $colorRedSienna;
+    }
+    &--green{
+      background-color: $colorGreenYellow;
+    }
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after{
+    content: '';
+  }
+  .swiper-button-next, 
+  .swiper-button-prev{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+  }
+  .swiper-button-next{
+    background-image: url('../img/swiper-cards-arrow-white-next.png');
+  }
+  .swiper-button-prev{
+    background-image: url('../img/swiper-cards-arrow-white-prev.png');
+  }
+}

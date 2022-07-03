@@ -1,0 +1,35 @@
+.product-set{
+  &__head-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__buttons{
+    display: flex;
+    align-items: center;
+  }
+  &__button{
+    background-color: $colorLavanda;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    border: 1.5px solid transparent;
+    color: $colorGolubinoGrey;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s linear,color 0.2s linear;
+    outline: none;
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+    &:hover{
+      background-color: $colorPurple;
+      color: $colorWhite;
+    }
+    &:focus{
+      border-color: $colorPurple;
+      color: $colorPurple;
+    }
+    
+  }
+}

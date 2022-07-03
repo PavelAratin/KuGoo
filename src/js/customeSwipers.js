@@ -1,6 +1,7 @@
-export function customeSwiper(){
-  const heroSwiper = document.querySelector('.js-hero-swiper')
-  if(heroSwiper){
+export function customeSwiper() {
+  const heroSwiper = document.querySelector('.js-hero-swiper');
+  const minPicSwipers = document.querySelectorAll('.js-product-card-swiper-minpic');
+  if (heroSwiper) {
     new Swiper(heroSwiper, {
       direction: 'horizontal',
       loop: true,
@@ -16,5 +17,17 @@ export function customeSwiper(){
         el: '.swiper-scrollbar',
       },
     });
-  } 
+  }
+  if (minPicSwipers.length) {
+    minPicSwipers.forEach(function (el) {
+      new Swiper(el, {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+          nextEl: '.js-min-pic-swiper-swiper-button-next',
+          prevEl: '.js-min-pic-swiper-swiper-button-prev',
+        }
+      });
+    });
+  }
 }
