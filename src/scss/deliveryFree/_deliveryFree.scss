@@ -1,0 +1,54 @@
+.delivery-free{
+  background-image: url('../img/delivery-free-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(100% - 35px);
+  margin: 55px auto;
+  border-radius: 10px;
+  padding: 67px 0;
+  position: relative;
+  overflow: hidden;
+  &__content-box{
+    max-width: 441px;
+    margin-left: auto;
+  }
+  &__shield{
+    display: inline-block;
+    font-size: 14px;
+    color: $colorWhite;
+    padding: 5px 11px;
+    border-radius: 5px;
+    background-color: $colorRedSienna;
+    margin-bottom: 27px;
+  }
+  &__title{
+    color: $colorWhite;
+    width: 100%;
+    margin-bottom: 27px;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+  &__button{
+    padding: 15px 25px;
+    font-size: 16px;
+    color: $colorBlack;
+    border-radius: 5px;
+    background-color: $colorWhite;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s linear,color 0.2s linear;
+    &:hover,
+    &:focus{
+      background-color: $colorPurple;
+      color: $colorWhite;
+    }
+
+  }
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 70px;
+    display: block;
+  }
+}

@@ -1,0 +1,87 @@
+.selections{
+  padding: 55px 0;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left,
+  &__right{
+    width: calc(100% - 50% - 15px);
+    background-image: url('../img/selections-layer-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: $colorLavanda;
+    border-radius: 10px;
+    padding: 32px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s linear;
+    cursor: pointer;  
+    &:hover{
+      transform: translateY(-5px);
+    }
+  }
+  &__img{
+    position: absolute;
+    top: 1px;
+    right: 0;
+    bottom: 0;
+    display: block;
+    &--women{
+      right: 30px;
+    }
+    &--samocat{
+      filter: drop-shadow(35px 39px 43px #000);
+    }
+  }
+  &__title{
+    max-width: 270px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    font-size: 16px;
+    line-height: 1.5;
+    color: $colorBlack;
+    max-width: 258px;
+    margin-bottom: 22px;
+  }
+  &__link{
+    color: $colorPurple;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    transition: opacity 0.2s linear;
+    &:hover{
+      opacity: 0.5;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: -19px;
+      width: 12px;
+      height: 10px;
+      background-image: url('../img/arrow-pic-right-blue.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      animation: arrowRight 1.5s linear alternate infinite;
+    }
+  }
+}
+@keyframes arrowRight{
+  0%{
+    right: -19px;
+  }
+  50%{
+    right: -25px;
+  }
+  100%{
+    right: -19px;
+  }
+
+}

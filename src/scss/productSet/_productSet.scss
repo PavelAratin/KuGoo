@@ -1,8 +1,10 @@
 .product-set{
+  padding-bottom: 55px;
   &__head-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 57px;
   }
   &__buttons{
     display: flex;
@@ -30,6 +32,24 @@
       border-color: $colorPurple;
       color: $colorPurple;
     }
-    
+  }
+  &__viewall{
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 1px solid $colorPurple;
+    background-color: transparent;
+    color: $colorPurple;
+    font-size: 16px;
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s linear, color 0.2s linear;
+    &:hover,
+    &:focus{
+      background-color: $colorPurple;
+      color: $colorWhite;
+    }
   }
 }

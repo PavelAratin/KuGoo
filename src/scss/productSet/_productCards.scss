@@ -1,12 +1,31 @@
 .product-cards{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(255px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   grid-gap: 30px;
-  border-radius: 5px;
+  margin-bottom: 50px;
+  &__link-overlay{
+    outline: 0;
+  }
+  &__card{
+    border-radius: 13px;
+    border: 1px solid $colorBlueBledniVery;
+    position: relative;
+    transition: box-shadow 0.2s linear;
+    &:hover{
+      -webkit-box-shadow: 0px 0px 12px -2px rgba(34, 60, 80, 0.5);
+      -moz-box-shadow: 0px 0px 12px -2px rgba(34, 60, 80, 0.5);
+      box-shadow: 0px 0px 12px -2px rgba(34, 60, 80, 0.5);
+    }
+    &:hover .swiper-button-next,
+    &:hover .swiper-button-prev{
+      opacity: 1;
+    }
+  }
   &__imgbox{
     position: relative;
   }
   &__img{
+    display: block;
     width: 100%;
   }
   &__shield{
@@ -27,6 +46,123 @@
       background-color: $colorGreenYellow;
     }
   }
+  &__svg-box{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: $colorBlueBledni;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background-image: url('../img/ves-black.svg');
+    background-repeat: no-repeat;
+    background-position: center;  
+  }
+  &__body{
+    padding: 20px 24px;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 18px;
+    color: $colorBlack;
+    margin-bottom: 20px;
+  }
+  &__info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(93px,1fr));
+    row-gap: 16px;
+    column-gap: 24px;
+    margin-bottom: 25px;
+  }
+  &__info-text{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $colorGrey600;
+    padding-left: 28px;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: left center;
+    line-height: 1.5;
+    &--accum{
+      background-image: url('../img/accum-pic.svg');
+    }
+    &--power{
+      background-image: url('../img/power-pic.svg');
+    }
+    &--kmch{
+      background-image: url('../img/speedometr-pic.svg');
+    }
+    &--timer{
+      background-image: url('../img/timer-pic.svg');
+    }
+  }
+  &__actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+  }
+  &__price-actual{
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration-line: line-through;
+    color: $colorGrey600;
+    margin-bottom: 5px;
+  }
+  &__price-sale{
+    font-weight: 600;
+    font-size: 20px;
+    color: $colorBlack;
+  }
+  &__btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 1px solid $colorBlueBledniVery;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    outline-color: $colorPurple;
+    cursor: pointer;
+    transition: background 0.2s linear;
+    &--incart{
+      background-image: url('../img/cart-white.svg');
+      margin-right: 10px;
+      &:hover{
+        background-color: $colorLavanda;
+      }
+    }
+    &--like{
+      background-image: url('../img/heart-white.svg');
+      &:hover{
+        background-color: $colorLavanda;
+      }
+    }
+  }
+  &__button{
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: $colorWhite;
+    background-color: $colorPurple;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s linear;
+    &:hover,
+    &:focus{
+      background-color: $colorBlueHover;
+    }
+  }
   .swiper-button-next:after,
   .swiper-button-prev:after{
     content: '';
@@ -39,11 +175,20 @@
     background-size: contain;
     background-position: center;
     border: none;
+    outline:none;
+    opacity: 0;
+    transition: opacity 0.2s linear,background 0.2s linear;
   }
   .swiper-button-next{
     background-image: url('../img/swiper-cards-arrow-white-next.png');
+    &:hover{
+      background-image: url('../img/swiper-cards-arrow-blue-next.svg');
+    }
   }
   .swiper-button-prev{
     background-image: url('../img/swiper-cards-arrow-white-prev.png');
+    &:hover{
+      background-image: url('../img/swiper-cards-arrow-blue-prev.svg');
+    }
   }
 }

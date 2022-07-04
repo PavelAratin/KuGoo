@@ -36,6 +36,15 @@
     background-color: $colorWhite;
     border-radius: 5px;
     border: none;
+    outline: none;
+    border: 1px solid $colorWhite;
+    cursor: pointer;
+    transition: color 0.2s linear, background 0.2s linear;
+    &:hover,
+    &:focus{
+      color: $colorWhite;
+      background-color: transparent;
+    }
   }
   &__kirin{
     position: absolute;
@@ -68,6 +77,12 @@
     bottom: 31px;
     transform: translateX(-2040%);
     left: 50%;
+    outline: none;
+    transition: background 0.2s linear;
+    &:hover,
+    &:focus{
+      background-image: url('../img/hero-next-arrow-white.svg');
+    }
   }
   .swiper-button-prev{
     background-color: transparent;
@@ -79,6 +94,12 @@
     bottom: 31px;
     transform: translateX(-2450%);
     left: 50%;
+    transition: background 0.2s linear;
+    outline: none;
+    &:hover,
+    &:focus{
+      background-image: url('../img/hero-prev-arrow-white.svg');
+    }
   }
   .swiper-pagination{
     color: $colorWhite;

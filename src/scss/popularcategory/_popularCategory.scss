@@ -1,0 +1,61 @@
+.popular-category{
+  padding: 55px 0;
+  &__title{
+  margin-bottom: 95px;   
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 30px;
+  }
+  &__item{
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+  }
+  &__link-overlay{
+    display: block;
+    width: 100%px;
+    height: 300px;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s linear;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:hover{
+      transform: scale(1.1);
+    }
+    &--robot{
+      background-image: url('../img/robot.jpg');
+    }
+    &--elvel{
+      background-image: url('../img/electrovel.jpg');
+    }
+    &--vesi{
+      background-image: url('../img/vesji.jpg');
+    }
+  }
+  &__text-box{
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    font-weight: 500;
+    color: $colorWhite;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+  }
+  &__mintitle{
+  font-size: 18px;
+  margin-bottom: 2px;
+  }
+  &__price{
+  font-size: 14px;
+  }
+}
