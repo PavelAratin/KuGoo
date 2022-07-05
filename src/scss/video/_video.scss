@@ -1,0 +1,42 @@
+.video{
+  width: calc(100% - 35px);
+  margin: 0 auto;
+  height: 630px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url('../img/video-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+  &__play{
+    outline: none;
+    border: none;
+    width: 136px;
+    height: 136px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: background 0.2s linear;
+    cursor: pointer;
+    &:hover,
+    &:focus{
+      background-color: $colorPurple;
+    }
+    &:hover svg,
+    &:focus svg{
+      fill: $colorWhite;
+    }
+  }
+  &__svg{
+    fill: $colorPurple;
+    transition: fill 0.2s linear;
+    pointer-events: none;
+  }
+}
