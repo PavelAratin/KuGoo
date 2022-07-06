@@ -1,0 +1,129 @@
+.reviews{
+  padding: 55px 0 350px 0;
+  position: relative;
+  &__title{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+  }
+  &__viewall{
+    color: #6F73EE;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    display: block;
+    transition: opacity 0.2s linear;
+    text-align: center;
+    margin-bottom: 57px;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: -19px;
+      width: 12px;
+      height: 10px;
+      background-image: url(../img/arrow-pic-right-blue.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      -webkit-animation: arrowRight 1.5s linear alternate infinite;
+      animation: arrowRight 1.5s linear alternate infinite;
+    }
+  }
+}
+.reviews-gallerey{
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  // @media(any-hover:none){
+  //   position: static;
+  //   left: 0;
+  //   right: 0;
+  // }
+  &__row{
+    display: flex;
+    align-items: center;
+  }
+  &__box{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 10px;
+    &--medium{
+      width: 250px;
+    }
+    &--big{
+      width: 400px;
+    }
+    &:hover .reviews-gallerey__textbox{
+      top: 0;
+    }
+  }
+  &__img{
+    width: 100%;
+    border-radius: 10px;
+  }
+  &__textbox{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    justify-content: end;
+    overflow: hidden;
+    transition: top 0.1s linear;
+  }
+  &__autors{
+    display: flex;
+    align-items: center;
+    margin-bottom: 19px;  
+  }
+  &__autor{
+    margin-right: 16px;
+  }
+  &__name{
+    font-weight: 500;
+    font-size: 16px;
+    color: $colorWhite;
+    margin-bottom: 5px;
+  }
+  &__category{
+    font-size: 12px;
+    color: $colorWhite;
+    opacity: 0.2;
+  }
+  &__ratings,
+  &__stars{
+    display: flex;
+    align-items: center;
+  }
+  &__ratings{
+    margin-bottom: 11px;
+  }
+  &__stars{
+    margin-right: 14px;
+  }
+  &__star-svg{
+    width: 14px;
+    height: 14px;
+    &:not(:last-child){
+      margin-right: 5px;
+    }
+  }
+  &__date{
+    font-size: 12px;
+    color: $colorWhite;
+    opacity: 0.7;
+  }
+  &__description{
+    font-size: 14px;
+    color: $colorWhite;
+    line-height: 1.2;
+  }
+}

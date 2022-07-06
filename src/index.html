@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,18 +14,23 @@
   <script defer src="./joices/choices.min.js"></script>
   <script defer src="./js/main.js"></script>
 </head>
+
 <body>
-  @include('htmlPartials/header.html')
- <main>
-  @include('htmlPartials/heroSwiper.html')
-  @include('htmlPartials/infoBlog.html')
-  @include('htmlPartials/productSet.html')
-  @include('htmlPartials/selections.html')
-  @include('htmlPartials/deliveryFree.html')
-  @include('htmlPartials/popularCategry.html')
-  @include('htmlPartials/officialDealer.html')
-  @include('htmlPartials/offers.html')
-  @include('htmlPartials/video.html')
- </main>
+  <div class="site-container">
+    @include('htmlPartials/header.html')
+    <main>
+      @include('htmlPartials/heroSwiper.html')
+      @include('htmlPartials/infoBlog.html')
+      @include('htmlPartials/productSet.html')
+      @include('htmlPartials/selections.html')
+      @include('htmlPartials/deliveryFree.html')
+      @include('htmlPartials/popularCategry.html')
+      @include('htmlPartials/officialDealer.html')
+      @include('htmlPartials/offers.html')
+      @include('htmlPartials/video.html')
+      @include('htmlPartials/reviews.html')
+    </main>
+  </div>
 </body>
+
 </html>
