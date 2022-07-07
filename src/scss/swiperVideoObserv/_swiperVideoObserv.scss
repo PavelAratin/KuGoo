@@ -1,0 +1,147 @@
+.video-observ{
+  padding: 55px 0;
+  position: relative;
+  &__title{
+    margin-bottom: 17px;
+  }
+  &__subtitle{
+    font-size: 14px;
+    color: $colorGrey600;
+    line-height: 1.4;
+    max-width: 405px;
+  }
+  &__head-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__viewall{
+    color: rgb(111, 115, 238);
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    transition: opacity 0.2s linear 0s;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: -19px;
+      width: 12px;
+      height: 10px;
+      background-image: url(../img/arrow-pic-right-blue.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      animation: 1.5s linear 0s infinite alternate none running arrowRight;
+    }
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+  &__wrap{
+    position: relative;
+  }
+  &__titlevideo{
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorBlack;
+  }
+  &__text-descr{
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorBlack;
+  }
+  .swiper{
+    width: 100vw;
+    padding-left: 14px;
+    padding-bottom: 18px;
+    padding-top: 18px;
+  }
+  .swiper-slide{
+    border-radius: 10px;
+    overflow: hidden;
+    width: 550px; 
+    height: 350px;
+    position: relative;
+    & img{
+      transition: height 0.2s linear;
+      height: 83%;
+    }
+  }
+  .swiper-slide img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .swiper-slide-active{
+    height: 400px;
+  }
+  .swiper-slide-active img{
+   height: 90%;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after{
+    content: '';
+  }
+  .swiper-button-next,
+  .swiper-button-prev{
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+    background-color: $colorPurple;
+    border: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 10px 18px;
+  }
+  .swiper-button-next{
+    right: 50%;
+    transform: translateX(810%);
+    background-image: url('../img/arrow-white-right1.svg');
+  }
+  .swiper-button-prev{
+    left: 50%;
+    transform: rotate(-180deg) translateX(1000%);
+    background-image: url('../img/arrow-white-right1.svg');
+    
+  }
+  &__play{
+    outline: none;
+    border: none;
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 0.2s linear;
+    cursor: pointer;
+    &:hover,
+    &:focus{
+      background-color: $colorPurple;
+    }
+    &:hover svg,
+    &:focus svg{
+      fill: $colorWhite;
+    }
+    &__svg{
+      fill: $colorPurple;
+      transition: fill 0.2s linear;
+      pointer-events: none;
+    }
+  }
+  .videos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

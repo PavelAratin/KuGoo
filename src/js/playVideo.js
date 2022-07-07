@@ -1,11 +1,18 @@
 export function playVideo(){
-  const videoBox = document.querySelector('.js-video');
-  const videoPlayButton = document.querySelector('.js-video-play')
-  videoBox.addEventListener('click',function(e){
-    console.log(e.target.className)
-    if(e.target.classList.contains('js-video-play')){
-      videoBox.insertAdjacentHTML("beforeend",'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
-      videoPlayButton.remove();
-    }
+  const videoBoxes = document.querySelectorAll('.js-video');
+  const videoPlayButtons = document.querySelectorAll('.js-video-play')
+  console.log(videoBoxes,videoPlayButtons)
+  videoBoxes.forEach(function(el){
+    el.addEventListener('click',function(e){
+      if(e.target.classList.contains('js-video-play'))
+      el.insertAdjacentHTML("beforeend",'<iframe class="videos" width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+      el.querySelector('.js-video-play').remove()
+    });
   });
+  // videoBox.addEventListener('click',function(e){
+  //   if(e.target.classList.contains('js-video-play')){
+  //     videoBox.insertAdjacentHTML("beforeend",'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+  //     videoPlayButton.remove();
+  //   }
+  // });
 }

@@ -2,6 +2,7 @@ export function customeGallerey() {
   const gallereBody = document.querySelector('.js-reviews-gallerey');
   if (gallereBody) {
     const gallereyBodyItem = document.querySelector('.js-reviews-gallerey-row')
+    const gallereyBodyItem2 = document.querySelector('.js-reviews-gallerey-row2')
     //скорость анимации
     const speed = gallereBody.dataset.speed;
     //переменные
@@ -14,13 +15,23 @@ export function customeGallerey() {
       positionX = positionX + (distX * speed)
       let position = widthDifferent / 200 * positionX
       gallereyBodyItem.style.cssText = `transform:translate3d(${-position}px,0,0);`;
+      gallereyBodyItem2.style.cssText = `transform:translate3d(${-position}px,0,0);`;
       if (Math.abs(distX) > 0) {
         requestAnimationFrame(setMouseGallereyStyle)
       } else {
         gallereBody.classList.remove('init')
       }
     }
-    gallereBody.addEventListener('mousemove', function (e) {
+    gallereyBodyItem.addEventListener('mousemove', function (e) {
+      let widthGallerey = gallereBody.offsetWidth;
+      const coordX = e.pageX - widthGallerey / 3
+      coordXpercent = Math.floor(coordX / widthGallerey * 350)
+      if(!gallereBody.classList.contains('init')){
+        requestAnimationFrame(setMouseGallereyStyle)
+        gallereBody.classList.add('init')
+      }
+    });
+    gallereyBodyItem2.addEventListener('mousemove', function (e) {
       let widthGallerey = gallereBody.offsetWidth;
       const coordX = e.pageX - widthGallerey / 3
       coordXpercent = Math.floor(coordX / widthGallerey * 350)

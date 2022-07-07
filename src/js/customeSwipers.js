@@ -1,6 +1,7 @@
 export function customeSwiper() {
   const heroSwiper = document.querySelector('.js-hero-swiper');
   const minPicSwipers = document.querySelectorAll('.js-product-card-swiper-minpic');
+  const videoObserv = document.querySelector('.js-video-observ');
   if (heroSwiper) {
     new Swiper(heroSwiper, {
       direction: 'horizontal',
@@ -28,6 +29,18 @@ export function customeSwiper() {
           prevEl: '.js-min-pic-swiper-swiper-button-prev',
         }
       });
+    });
+  }
+  if (videoObserv) {
+    new Swiper(videoObserv, {
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.js-video-observ-button-next',
+        prevEl: '.js-video-observ-button-prev',
+      },
     });
   }
 }

@@ -41,6 +41,9 @@ input[type="search"]::-webkit-search-results-decoration {
   max-width: 1360px;
   padding: 0 20px;
   margin: 0 auto;
+  &--video-observ{
+    padding: 0 10px;
+  }
 }
 .list{
   padding: 0;
