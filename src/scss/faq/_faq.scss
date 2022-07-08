@@ -1,0 +1,52 @@
+.faq{
+  padding: 55px 0;
+  &__title{
+    margin: 0 auto 60px;
+    max-width: 456px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+}
+.accordion{
+  width: calc(734 / 1360 * 100%);
+  margin: 0 auto;
+  &__button{
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 16px;
+    color: $colorBlack;
+    background-image: url('../img/plus-black.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 50px;
+    width: 100%;
+    text-align: left;
+    transition: background 0.2s linear;
+    cursor: pointer;
+    &.active{
+      background-image: url('../img/plus-black-rotate.svg');
+    }
+  }
+  &__item{
+    padding: 16px 0;
+    border-bottom: 1px solid $colorBlueBledniVery;
+  }
+  &__content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s linear;
+  }
+  &__text{
+    font-size: 14px;
+    color: $colorBlack;
+    line-height: 1.4;
+    &:not(:last-child){
+      margin-bottom: 27px;
+    }
+    &:first-child{
+      padding-top: 24px;
+    }
+  }
+}

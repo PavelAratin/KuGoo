@@ -1,7 +1,6 @@
 export function playVideo(){
   const videoBoxes = document.querySelectorAll('.js-video');
   const videoPlayButtons = document.querySelectorAll('.js-video-play')
-  console.log(videoBoxes,videoPlayButtons)
   videoBoxes.forEach(function(el){
     el.addEventListener('click',function(e){
       if(e.target.classList.contains('js-video-play'))
@@ -9,10 +8,4 @@ export function playVideo(){
       el.querySelector('.js-video-play').remove()
     });
   });
-  // videoBox.addEventListener('click',function(e){
-  //   if(e.target.classList.contains('js-video-play')){
-  //     videoBox.insertAdjacentHTML("beforeend",'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
-  //     videoPlayButton.remove();
-  //   }
-  // });
 }

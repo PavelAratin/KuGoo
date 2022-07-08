@@ -2,6 +2,7 @@ export function customeSwiper() {
   const heroSwiper = document.querySelector('.js-hero-swiper');
   const minPicSwipers = document.querySelectorAll('.js-product-card-swiper-minpic');
   const videoObserv = document.querySelector('.js-video-observ');
+  const articlesSwiper = document.querySelector('.js-articles-swiper');
   if (heroSwiper) {
     new Swiper(heroSwiper, {
       direction: 'horizontal',
@@ -40,6 +41,18 @@ export function customeSwiper() {
       navigation: {
         nextEl: '.js-video-observ-button-next',
         prevEl: '.js-video-observ-button-prev',
+      },
+    });
+  }
+  if (articlesSwiper) {
+    new Swiper(articlesSwiper, {
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 4,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.js-articles-button-next',
+        prevEl: '.js-articles-button-prev',
       },
     });
   }
