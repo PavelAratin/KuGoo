@@ -1,0 +1,166 @@
+.footer{
+  background-color: $colorLavanda;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 46px 0;
+  }
+  &__link{
+    font-size: 14px;
+    color: $colorGrey600;
+    transition: color 0.2s linear;
+    outline: none;
+    &:hover,
+    &:focus{
+      color: $colorPurple;
+    }
+    &--title{
+      font-weight: 500;
+      font-size: 18px;
+      color: $colorBlack;
+      margin-bottom: 17px;
+    }
+  }
+  &__list{
+    &--margin{
+      margin-right: 125px;
+    }
+    &--margin-min{
+      margin-right: 44px;
+    }
+    &--self-bottom{
+      align-self: end;
+    }
+  }
+  &__social,
+  .list-social,
+  .list-apps{
+    display: flex;
+    align-items: center;
+  }
+  &__lists{
+    align-self: flex-start;
+  }
+  &__lists,
+  &__list-wrapper{
+    display: flex;
+  }
+  &__item:not(:last-child){
+    margin-bottom: 10px;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorBlack;
+    margin-bottom: 17px;
+  }
+  &__social{
+    padding: 36px 0;
+    border-top: 1px solid $colorBlueBledniVery;
+    border-bottom: 1px solid $colorBlueBledniVery;
+  }
+}
+.footer-adreses{
+  display: grid;
+  width: 600px;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 28px;
+  column-gap: 40px;
+  &__descr{
+    font-size: 14px;
+    color: $colorBlack;
+    margin-bottom: 5px;
+  }
+  &__tel{
+    font-size: 12px;
+    color: $colorGrey600;
+    transition: color 0.2s linear;
+    outline: none;
+    &:hover,
+    &:focus{
+      color: $colorPurple;
+    }
+    &--bold{
+      font-weight: 500;
+      font-size: 16px;
+      color: $colorBlack;
+      margin-bottom: 7px;
+    }
+  }
+  &__working{
+    font-size: 12px;
+    color: $colorGrey600;
+  }
+  &__item--position{
+    grid-column-start: 1;
+  }
+}
+.list-apps{
+  margin-right: 10px;
+  &__item:not(:last-child){
+    margin-right: 10px;
+  }
+  &__item{
+    transition: transform 0.2s linear;
+    &:hover{
+      transform: translateY(-5px);
+    }
+  }
+}
+.list-social{
+  margin-left: auto;
+  &__item:not(:last-child){
+    margin-right: 20px;
+  }
+  &__item{
+    transition: transform 0.2s linear;
+    &:hover{
+      transform: translateY(-5px);
+    }
+  }
+}
+.privacy-policy{
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  &__list{
+    display: flex;
+    &--payment{
+      .privacy-policy__item:not(:last-child){
+        margin-right: 5px;
+      }
+      .privacy-policy__item{
+        transition: transform 0.2s linear;
+        &:hover{
+          transform: translateY(-5px);
+        }
+      }
+      
+    }
+  }
+  &__item:not(:last-child){
+    margin-right: 44px;
+  }
+  &__link{
+    font-size: 12px;
+    color: $colorGrey600;
+    transition: color 0.2s linear;
+    outline: none;
+    &:hover,
+    &:focus{
+      color: $colorPurple;
+    }
+  }
+  &__chat{
+    display: flex;
+    align-items: center;
+  }
+  &__text{
+    font-size: 14px;
+    color: $colorBlack;
+    margin-right: 15px;
+  }
+  &__wrapper{
+    margin: 0 40px 0 auto;
+  }
+}
