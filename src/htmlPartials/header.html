@@ -9,7 +9,7 @@
         <li class="header__item-top"><a href="#" class="link header__link-top"><span
               class="header__link-top-text">Заказать звонок</span></a></li>
       </ul>
-      <ul class="list social-list">
+      <ul class="list social-list header__social-list">
         <li class="social-list__item">
           <a href="#" class="link social-list__link">
             <svg class="social-list__svg social-list__svg--call">
@@ -49,7 +49,7 @@
         </div>
         Каталог
       </button>
-      <form action="#" class="search-form">
+      <form action="#" class="search-form search-form--header">
         <select name="search-select" class="js-choice">
           <option value="Везде">Везде</option>
           <option value="Самокаты">Самокаты</option>
@@ -78,6 +78,58 @@
           <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text nav-list__link-text--value">Акции</span><span class="nav-list__value">%</span></a></li>
         </ul>
       </nav>
+    </div>
+    <div class="header-mobile">
+      <div class="header-mobile__open-apps">
+        <div class="container">
+          <div class="header-mobile__left">
+            <img src="img/open-app-pic.png" alt="Картинка">
+            <div class="header-mobile__app-rating">
+              <p class="header-mobile__open-apps-text">Открыть в приложении</p>
+              <div class="header-mobile__svgs">
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <span class="header-mobile__value">2k</span>
+              </div>
+            </div>
+          </div>
+          <button class="header-mobile__button">Открыть</button>
+        </div>
+      </div>
+      <div class="header-mobile__wrapper">
+        <a href="#" class="logo logo--header link">KUGOO</a>
+        <div class="header-mobile__inner">
+          <svg>
+            <use xlink:href="img/sprite.svg#tel-purple"></use>
+          </svg>
+          <button class="button-catalog button-catalog--mobile">
+            <div class="burger">
+              <span class="burger__line burger__line--top"></span>
+              <span class="burger__line burger__line--middle"></span>
+              <span class="burger__line burger__line--bottom"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="header-mobile__search">
+        <form action="#" class="search-form">
+          <input class="search-form__input" type="search" placeholder="Искать самокат KUGO">
+          <button class="search-form__button" type="submit"></button>
+        </form>
+      </div>
     </div>
   </div>
 </header>

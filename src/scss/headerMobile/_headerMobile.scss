@@ -1,0 +1,71 @@
+.header-mobile{
+  padding-top: 50px;
+  display: none;
+  &__open-apps{
+    border-bottom: 1px solid $colorLavanda;
+    padding: 9px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $colorWhite;
+    z-index: 100;
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__left{
+    display: flex;
+  }
+  svg{
+    width: 9px;
+    height: 9px;
+  }
+  img{
+    width: 25px;
+    height: 25px;
+    margin-right: 9px;
+  }
+  span{
+    font-size: 8px;
+    color: $colorGrey600;
+    vertical-align: middle;
+  }
+  &__open-apps-text{
+    font-size: 10px;
+    color: $colorBlack;
+  }
+  button{
+    background-color: $colorPurple;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 12px;
+    color: $colorWhite;
+  }
+  &__wrapper{
+    padding: 17px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+    svg{
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .search-form{
+    width: 100%;
+    padding: 10px;
+    button{
+     height: 100%;
+     background-color: transparent;
+     background-image: url(../img/serach-grey.svg);
+    }
+  }
+}

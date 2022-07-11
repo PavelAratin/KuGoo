@@ -151,6 +151,9 @@
 .search-form{
   display: flex;
   align-items: center;
+  &--header{
+    margin-right: 10px;
+  }
 }
 .button-catalog{
   padding: 15px;
@@ -167,6 +170,12 @@
   transition: background 0.2s linear;
   &--header{
     margin-right: 20px;
+  }
+  &--mobile{
+    background: transparent !important;
+    .burger__line{
+      background-color: $colorPurple;
+    }
   }
   &:hover,
   &:focus{
