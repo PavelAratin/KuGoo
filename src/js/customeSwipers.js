@@ -9,7 +9,7 @@ export function customeSwiper() {
       loop: true,
       pagination: {
         el: '.swiper-pagination',
-        type: 'fraction',
+        type: 'bullets',
       },
       navigation: {
         nextEl: '.js-hero-swiper-button-next',
@@ -42,6 +42,15 @@ export function customeSwiper() {
         nextEl: '.js-video-observ-button-next',
         prevEl: '.js-video-observ-button-prev',
       },
+      breakpoints:{
+        320:{
+          spaceBetween: 20,
+          slidesPerView: 1,
+        },
+        768:{
+          spaceBetween: 50
+        }
+      }
     });
   }
   if (articlesSwiper) {
@@ -54,6 +63,19 @@ export function customeSwiper() {
         nextEl: '.js-articles-button-next',
         prevEl: '.js-articles-button-prev',
       },
+      breakpoints:{
+        320:{
+          slidesPerView: 1,
+        },
+        768:{
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+        1200:{
+          spaceBetween: 50,
+          slidesPerView: 4,
+        }
+      }
     });
   }
 }

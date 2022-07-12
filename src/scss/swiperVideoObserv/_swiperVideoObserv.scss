@@ -23,11 +23,12 @@
     position: relative;
     display: inline-block;
     transition: opacity 0.2s linear 0s;
-    &::before{
+    padding-right: 20px;
+    &::after{
       content: "";
       position: absolute;
-      top: 4px;
-      right: -19px;
+      top: 5px;
+      left: 187px;
       width: 12px;
       height: 10px;
       background-image: url(../img/arrow-pic-right-blue.svg);

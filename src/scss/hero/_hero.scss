@@ -1,4 +1,5 @@
 .hero{
+  position: relative;
   &__background{
     background: radial-gradient(58.73% 541.94% at 75.14% 62.23%, #A6A9FF 0%, #6F73EE 100%);
     border-radius: 10px;
@@ -72,11 +73,9 @@
     background-image: url('../img/hero-next-arrow.svg');
     background-repeat: no-repeat;
     background-position: center;
-    left: 129px;
     top: auto;
-    bottom: 31px;
-    transform: translateX(-2040%);
-    left: 50%;
+    left: 120px;
+    bottom: 30px;
     outline: none;
     transition: background 0.2s linear;
     &:hover,
@@ -92,8 +91,8 @@
     background-position: center;
     top: auto;
     bottom: 31px;
-    transform: translateX(-2450%);
-    left: 50%;
+    left: 40px;
+    bottom: 30px;
     transition: background 0.2s linear;
     outline: none;
     &:hover,
@@ -102,15 +101,13 @@
     }
   }
   .swiper-pagination{
-    color: $colorWhite;
-    top: auto;
-    bottom: 44px;
-    width: fit-content;
-    transform: translateX(-1800%);
-    left: 50%;
-  }
-  .swiper-scrollbar{
     display: none;
+    bottom: -25px;
+  }
+  .swiper-pagination-bullet {
+    width: 20px;
+    border-radius: 0;
+    height: 1px;
   }
 }
 .box-shield{

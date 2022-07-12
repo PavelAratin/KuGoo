@@ -123,6 +123,8 @@
   padding: 20px 0;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   &__list{
     display: flex;
     &--payment{
@@ -160,7 +162,7 @@
     color: $colorBlack;
     margin-right: 15px;
   }
-  &__wrapper{
-    margin: 0 40px 0 auto;
-  }
+}
+.list-social-mobile{
+  display: none;
 }

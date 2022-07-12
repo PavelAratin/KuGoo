@@ -59,6 +59,25 @@
       opacity: 0.5;
     }
   }
+  &__link-more{
+    width: 100%;
+    padding: 22px 11px;
+    font-weight: 500;
+    font-size: 14px;
+    color: $colorWhite;
+    background-color: $colorPurple;
+    border-radius: 10px;
+    background-image: url('../img/arrow-white-right.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    transition: background 0.2s linear;
+    outline: none;
+    display: none;
+    &:hover,
+    &:focus{
+      background-color: $colorBlueHover;
+    }
+  }
   .testdrive{
     position: relative;
     width: calc(100% - 50%);
@@ -121,7 +140,6 @@
       &:focus{
         background-color: $colorBlueHover;
       }
-
     }
   }
 }
