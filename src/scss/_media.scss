@@ -286,6 +286,12 @@
   .hero .swiper-pagination{
     display: block;
   }
+  .info-block__wrapper{
+    grid-gap: 15px;
+  }
+  .info-block__title{
+    font-size: 20px;
+  }
   .selections__img {
     display: none;
   }
