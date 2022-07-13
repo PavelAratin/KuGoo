@@ -1,0 +1,111 @@
+.cart{
+  position: absolute;
+  z-index: 10;
+  border-radius: 5px;
+  background-color: $colorWhite;
+  min-width: 300px;
+  overflow: hidden;
+  right: 5%;
+  top: 110%;
+  transform: scale(1);
+  transition: transform 0.2s linear;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
+  &.hidden{
+    transform: scale(0);
+  }
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $colorLavanda;
+    padding: 17px 20px;
+  }
+  &__title-header{
+    font-weight: 500;
+    font-size: 16px;
+    color: $colorBlack;
+  }
+  &__counter-header{
+    font-size: 14px;
+    color: $colorGrey600;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid $colorBlueBledniVery;
+  }
+  &__img{
+    margin-right: 15px;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 14px;
+    color: $colorBlack;
+    margin-bottom: 5px;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: $colorBlack;
+  }
+  &__price-good{
+    margin-right: 13px;
+  }
+  &__button-delete-good{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url('../img/delete-icon.svg');
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    background-color: transparent;
+    border-radius: 100%;
+    transition: background 0.2s linear;
+    cursor: pointer;
+    &:hover,
+    &:focus{
+      background-color: $colorBlueBledni;
+      background-image: url('../img/delete-icon-red.svg');
+    }
+  }
+  &__footer{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  &__sum-text{
+    font-size: 12px;
+    color: $colorGrey600;
+    margin-bottom: 5px;
+  }
+  &__sum-number{
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorBlack;
+  }
+  &__button{
+    background-color: $colorPurple;
+    border-radius: 5px;
+    color: $colorWhite;
+    padding: 10px 0;
+    width: 150px;
+    border: none;
+    margin-left: auto;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s linear,color 0.2s linear,box-shadow 0.2s linear;
+    &:hover,
+    &:focus{
+      background-color: transparent;
+      color: $colorPurple;
+      box-shadow: 0 0 0 2px $colorPurple;
+    }
+  }
+}

@@ -39,6 +39,27 @@ function accordionFaq() {
 
 /***/ }),
 
+/***/ "./src/js/cart.js":
+/*!************************!*\
+  !*** ./src/js/cart.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cart": () => (/* binding */ cart)
+/* harmony export */ });
+function cart() {
+  var linkCart = document.querySelector('.js-link-cart');
+  var cart = document.querySelector('.js-cart');
+  linkCart.addEventListener('click', function () {
+    cart.classList.toggle('hidden');
+  });
+}
+;
+
+/***/ }),
+
 /***/ "./src/js/customeGallerey.js":
 /*!***********************************!*\
   !*** ./src/js/customeGallerey.js ***!
@@ -199,6 +220,30 @@ function customeSwiper() {
 
 /***/ }),
 
+/***/ "./src/js/dropDownLestTel.js":
+/*!***********************************!*\
+  !*** ./src/js/dropDownLestTel.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "dropDownLestTel": () => (/* binding */ dropDownLestTel)
+/* harmony export */ });
+function dropDownLestTel() {
+  var linkDropDown = document.querySelector('.js-header-tel');
+  var dropdownListTel = document.querySelector('.js-dropdown-list-tel');
+
+  if (linkDropDown) {
+    linkDropDown.addEventListener('click', function (e) {
+      dropdownListTel.classList.toggle('active');
+    });
+  }
+}
+;
+
+/***/ }),
+
 /***/ "./src/js/joicesCustome.js":
 /*!*********************************!*\
   !*** ./src/js/joicesCustome.js ***!
@@ -219,6 +264,50 @@ function joicesCustome() {
       }
     });
   });
+}
+
+/***/ }),
+
+/***/ "./src/js/modals.js":
+/*!**************************!*\
+  !*** ./src/js/modals.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "modals": () => (/* binding */ modals)
+/* harmony export */ });
+function modals() {
+  function bindModal(triggerSelector, modalSelector, closeSelector) {
+    var triggerModalCallback = document.querySelectorAll(triggerSelector);
+    var modalCallback = document.querySelector(modalSelector);
+    var buttonClose = document.querySelector(closeSelector); //.js-modal-callback-trigger
+    //.js-modal-callback
+    //.js-button-close
+
+    triggerModalCallback.forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        if (e.target) {
+          e.preventDefault();
+          modalCallback.style.display = 'flex';
+          document.body.classList.add('js-modal-open');
+        }
+      });
+    });
+    buttonClose.addEventListener('click', function () {
+      modalCallback.style.display = 'none';
+      document.body.classList.remove('js-modal-open');
+    });
+    modalCallback.addEventListener('click', function (e) {
+      if (e.target === modalCallback) {
+        modalSelector.style.display = 'none';
+        document.body.classList.remove('js-modal-open');
+      }
+    });
+  }
+
+  bindModal('.js-modal-callback-trigger', '.js-modal-callback', '.js-button-close');
 }
 
 /***/ }),
@@ -353,6 +442,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _playVideo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./playVideo */ "./src/js/playVideo.js");
 /* harmony import */ var _customeGallerey__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./customeGallerey */ "./src/js/customeGallerey.js");
 /* harmony import */ var _accordionFaq__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./accordionFaq */ "./src/js/accordionFaq.js");
+/* harmony import */ var _dropDownLestTel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dropDownLestTel */ "./src/js/dropDownLestTel.js");
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modals */ "./src/js/modals.js");
+/* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./cart */ "./src/js/cart.js");
+
+
+
 
 
 
@@ -366,6 +461,9 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_playVideo__WEBPACK_IMPORTED_MODULE_3__.playVideo)();
   (0,_customeGallerey__WEBPACK_IMPORTED_MODULE_4__.customeGallerey)();
   (0,_accordionFaq__WEBPACK_IMPORTED_MODULE_5__.accordionFaq)();
+  (0,_dropDownLestTel__WEBPACK_IMPORTED_MODULE_6__.dropDownLestTel)();
+  (0,_modals__WEBPACK_IMPORTED_MODULE_7__.modals)();
+  (0,_cart__WEBPACK_IMPORTED_MODULE_8__.cart)();
 });
 })();
 

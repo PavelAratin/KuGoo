@@ -4,6 +4,9 @@ import { tabOffes } from './tabOffers';
 import { playVideo } from './playVideo';
 import {customeGallerey} from './customeGallerey';
 import {accordionFaq} from './accordionFaq';
+import {dropDownLestTel} from './dropDownLestTel';
+import{modals} from './modals';
+import{cart} from './cart';
 window.addEventListener('DOMContentLoaded', function () {
   joicesCustome();
   customeSwiper();
@@ -11,4 +14,7 @@ window.addEventListener('DOMContentLoaded', function () {
   playVideo();
   customeGallerey();
   accordionFaq();
+  dropDownLestTel();
+  modals();
+  cart();
 });

@@ -8,6 +8,9 @@ body{
   margin: 0;
   padding: 0;
   min-width: 320px;
+  &.js-modal-open{
+    overflow: hidden;
+  }
 }
 button{
   padding: 0;

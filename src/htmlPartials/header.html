@@ -6,7 +6,7 @@
               class="header__link-top-text">Сервис</span></a></li>
         <li class="header__item-top"><a href="#" class="link header__link-top"><span
               class="header__link-top-text">Сотрудничество</span></a></li>
-        <li class="header__item-top"><a href="#" class="link header__link-top"><span
+        <li class="header__item-top"><a href="#" class="link header__link-top js-modal-callback-trigger"><span
               class="header__link-top-text">Заказать звонок</span></a></li>
       </ul>
       <ul class="list social-list header__social-list">
@@ -32,12 +32,30 @@
           </a>
         </li>
       </ul>
-      <a class="tel header__tel" href="tel:+78005055461">
-        <span>+7(800)505-54-61</span>
-        <svg>
+      <div class="header__top-wrapper">
+        <a class="tel header__tel" href="tel:+78005055461">
+          <span>+7(800)505-54-61</span>
+        </a>
+        <svg class="header__tel-pic js-header-tel">
           <use xlink:href="img/sprite.svg#plus-round-grey"></use>
         </svg>
-      </a>
+      </div>
+      <ul class="list dropdown-list-tel js-dropdown-list-tel">
+        <li class="dropdown-list-tel__item">
+          <p class="dropdown-list-tel__text">Сервисный центр</p>
+          <a href="tel:+74993507692" class="tel dropdown-list-tel__link">+ 7 (499) 350 76 92</a>
+        </li>
+        <li class="dropdown-list-tel__item">
+          <p class="dropdown-list-tel__text">Оптовый отдел</p>
+          <a href="tel:+74992816452" class="tel dropdown-list-tel__link">+7 (499) 281-64-52</a>
+          <p class="dropdown-list-tel__text dropdown-list-tel__text--bold">пн-сб 10:00 - 19:00</p>
+        </li>
+        <li class="dropdown-list-tel__item">
+          <p class="dropdown-list-tel__text">Отдел рекламаций и претензий</p>
+          <a href="tel:+74993507692" class="tel dropdown-list-tel__link">+7 (499) 350-76-92</a>
+          <p class="dropdown-list-tel__text dropdown-list-tel__text--bold">пн-сб 10:00 - 19:00</p>
+        </li>
+      </ul>
     </div>
     <div class="header__middle">
       <a href="#" class="logo logo--header link">KUGOO</a>
@@ -63,8 +81,90 @@
           <span class="actions-user__link-text actions-user__link-text--ves"></span></a></li>
         <li class="actions-user__item"><a href="#" class="link actions-user__link">
           <span class="actions-user__link-text actions-user__link-text--heart"></span></a></li>
-        <li class="actions-user__item"><a href="#" class="link actions-user__link actions-user__link--cart">
-          <span class="actions-user__link-text actions-user__link-text--cart"></span>Корзина</a></li>
+        <li class="actions-user__item actions-user__item--cart"><a href="#" class="link actions-user__link actions-user__link--cart js-link-cart">
+          <span class="actions-user__link-text actions-user__link-text--cart"></span>Корзина</a>
+          <div class="cart hidden js-cart">
+            <div class="cart__header">
+              <p class="cart__title-header">В вашей корзине</p>
+              <p class="cart__counter-header"><span>2</span> товара</p>
+            </div>
+            <ul class="list cart__list">
+              <li class="cart__item">
+                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
+                <div class="cart__descriptions">
+                  <h4 class="cart__title">Kugoo Kirin M4</h4>
+                  <div class="cart__inner">
+                    <p class="cart__price-good">29 900</p>
+                    <p class="cart__counter-good"><span>1</span>шт.</p>
+                  </div>
+                </div>
+                <button class="cart__button-delete-good"></button>
+              </li>
+              <li class="cart__item">
+                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
+                <div class="cart__descriptions">
+                  <h4 class="cart__title">Kugoo Kirin M4</h4>
+                  <div class="cart__inner">
+                    <p class="cart__price-good">29 900</p>
+                    <p class="cart__counter-good"><span>1</span>шт.</p>
+                  </div>
+                </div>
+                <button class="cart__button-delete-good"></button>
+              </li>
+              <li class="cart__item">
+                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
+                <div class="cart__descriptions">
+                  <h4 class="cart__title">Kugoo Kirin M4</h4>
+                  <div class="cart__inner">
+                    <p class="cart__price-good">29 900</p>
+                    <p class="cart__counter-good"><span>1</span>шт.</p>
+                  </div>
+                </div>
+                <button class="cart__button-delete-good"></button>
+              </li>
+              <li class="cart__item">
+                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
+                <div class="cart__descriptions">
+                  <h4 class="cart__title">Kugoo Kirin M4</h4>
+                  <div class="cart__inner">
+                    <p class="cart__price-good">29 900</p>
+                    <p class="cart__counter-good"><span>1</span>шт.</p>
+                  </div>
+                </div>
+                <button class="cart__button-delete-good"></button>
+              </li>
+              <li class="cart__item">
+                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
+                <div class="cart__descriptions">
+                  <h4 class="cart__title">Kugoo Kirin M4</h4>
+                  <div class="cart__inner">
+                    <p class="cart__price-good">29 900</p>
+                    <p class="cart__counter-good"><span>1</span>шт.</p>
+                  </div>
+                </div>
+                <button class="cart__button-delete-good"></button>
+              </li>
+              <li class="cart__item">
+                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
+                <div class="cart__descriptions">
+                  <h4 class="cart__title">Kugoo Kirin M4</h4>
+                  <div class="cart__inner">
+                    <p class="cart__price-good">29 900</p>
+                    <p class="cart__counter-good"><span>1</span>шт.</p>
+                  </div>
+                </div>
+                <button class="cart__button-delete-good"></button>
+              </li>
+            </ul>
+            <div class="cart__footer">
+              <div class="cart__sum-wrap">
+                <p class="cart__sum-text">Сумма:</p>
+                <p class="cart__sum-number">59 800 <span>₽</span></p>
+              </div>
+              <button class="cart__button">Оформить заказ</button>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
     <div class="header__bottom">

@@ -1,0 +1,163 @@
+.modal-callback{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(27, 27, 27, 0.9);
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  &__wrapper{
+    background-color: $colorWhite;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    max-width: 790px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__left{
+    padding: 40px;
+    width: calc(355 / 790 * 100%);
+  }
+  &__right{
+    background-image: url('../img/ellips-decor.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    display: flex;
+  }
+  &__title{
+    margin-bottom: 16px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    color: $colorBlack;
+    margin-bottom: 35px;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  &__input{
+    border: 1px solid $colorLavanda;
+    border-radius: 5px;
+    padding: 15px 25px;
+    margin-bottom: 19px;
+    background-color: $colorWhite;
+    outline: none;
+    transition: box-shadow 0.2s linear;
+    &:hover,
+    &:focus{
+      box-shadow: 0 0 0 2px $colorPurple;
+    }
+    &::placeholder{
+      color: $colorGrey600;
+    }
+  }
+  &__button{
+    font-size: 16px;
+    color: $colorWhite;
+    background-color: $colorPurple;
+    border-radius: 5px;
+    padding: 15px;
+    border: 2px solid transparent;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: color 0.2s linear, background 0.2s linear;
+    &:hover{
+      border-color: $colorPurple;
+      background-color: transparent;
+      color: $colorPurple;
+    }
+  }
+  &__img{
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin-right: 66px;
+    margin-top: auto;
+  }
+  &__button-absolute{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+.custome-checkbox{
+  &__input{
+    position: absolute;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+  &__span{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: $colorLavanda;
+    margin-right: 5px;
+    vertical-align: top;
+    position: relative;
+    transition: box-shadow 0.2s linear;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 9px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) scale(0);
+      background-image: url('../img/ckeck-blue.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      display: block;
+      transition: transform 0.2s linear;
+    }
+  }
+  &__input:focus + &__span{
+    box-shadow: 0 0 5px 2px $colorPurple;
+  }
+  &__input:checked + &__span:before{
+    transform: translate(-50%,-50%) scale(1);
+  }
+  &__label{
+    font-size: 12px;
+    line-height: 1.1;
+    cursor: pointer;
+  }
+  &__label:hover &__span{
+    box-shadow: 0 0 5px 2px $colorPurple;
+  }
+}
+.button-close{
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  &__line{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $colorBlack;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    &--one{
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &--two{
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+}

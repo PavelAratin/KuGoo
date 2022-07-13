@@ -218,6 +218,29 @@
   .nav-list__link-text{
     font-size: 12px;
   }
+  .modal-callback__right{
+    display: none;
+  }
+  .modal-callback__left{
+    padding: 20px;
+    background-image: url(../img/ellips-decor.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+  }
+  .modal-callback__left,
+  .modal-callback__form{
+    width: 100%;
+  }
+  .modal-callback__button-absolute{
+    right: 5px;
+    top: 5px;
+  }
+  .modal-callback__title,
+  .modal-callback__subtitle{
+    margin-bottom: 10px;
+  }
+
 }
 
 @media screen and(max-width: 768px) {
