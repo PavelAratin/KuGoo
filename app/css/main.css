@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
+  overflow-anchor: none;
 }
 body.js-modal-open {
   overflow: hidden;
@@ -511,6 +512,10 @@ input[type=search]::-webkit-search-results-decoration {
 .actions-user__item--cart {
   position: relative;
 }
+.actions-user__item--cart.active:hover .cart {
+  opacity: 1;
+  visibility: visible;
+}
 .actions-user__link {
   padding: 20px;
   background-color: transparent;
@@ -553,6 +558,23 @@ input[type=search]::-webkit-search-results-decoration {
 .actions-user__link-text--cart {
   margin-right: 10px;
   background-image: url("../img/cart-blue.svg");
+}
+.actions-user__cart-counter {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 5px;
+  background-color: #EE685F;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 1;
 }
 
 .nav-list {
@@ -1206,6 +1228,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .product-cards__btn--incart:hover {
   background-color: #F4F7FB;
+}
+.product-cards__btn--incart:disabled {
+  background-image: url("../img/incart-green.svg");
 }
 .product-cards__btn--like {
   background-image: url("../img/heart-white.svg");
@@ -2608,12 +2633,10 @@ input[type=search]::-webkit-search-results-decoration {
   overflow: hidden;
   right: 5%;
   top: 110%;
-  transform: scale(1);
-  transition: transform 0.2s linear;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-}
-.cart.hidden {
-  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
 }
 .cart__header {
   display: flex;
@@ -2636,9 +2659,17 @@ input[type=search]::-webkit-search-results-decoration {
   align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid #EAEBED;
+  transition: background 0.2s linear;
+}
+.cart__item:hover {
+  background-color: #EAEBED;
 }
 .cart__img {
   margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
 }
 .cart__title {
   font-weight: 500;

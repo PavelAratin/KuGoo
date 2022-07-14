@@ -329,6 +329,10 @@
   }
   &__item--cart{
     position: relative;
+    &.active:hover .cart{
+      opacity: 1;
+      visibility: visible;
+    }
   }
   &__link{
     padding: 20px;
@@ -373,6 +377,23 @@
   &__link-text--cart{
     margin-right: 10px;
     background-image: url('../img/cart-blue.svg');
+  }
+  &__cart-counter{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    min-height: 20px;
+    padding: 5px;
+    background-color: $colorRedSienna;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: $colorWhite;
+    line-height: 1;
   }
 }
 .nav-list{

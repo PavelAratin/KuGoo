@@ -140,6 +140,9 @@
       &:hover{
         background-color: $colorLavanda;
       }
+      &:disabled{
+        background-image: url('../img/incart-green.svg');
+      }
     }
     &--like{
       background-image: url('../img/heart-white.svg');

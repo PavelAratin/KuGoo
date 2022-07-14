@@ -78,18 +78,20 @@
       </form>
       <ul class="list actions-user">
         <li class="actions-user__item"><a href="#" class="link actions-user__link actions-user__link--ves">
-          <span class="actions-user__link-text actions-user__link-text--ves"></span></a></li>
+            <span class="actions-user__link-text actions-user__link-text--ves"></span></a></li>
         <li class="actions-user__item"><a href="#" class="link actions-user__link">
-          <span class="actions-user__link-text actions-user__link-text--heart"></span></a></li>
-        <li class="actions-user__item actions-user__item--cart"><a href="#" class="link actions-user__link actions-user__link--cart js-link-cart">
-          <span class="actions-user__link-text actions-user__link-text--cart"></span>Корзина</a>
-          <div class="cart hidden js-cart">
+            <span class="actions-user__link-text actions-user__link-text--heart"></span></a></li>
+        <li class="actions-user__item actions-user__item--cart js-cart-btn">
+          <a href="#" class="link actions-user__link actions-user__link--cart">
+            <span class="actions-user__link-text actions-user__link-text--cart"></span>Корзина</a>
+          <span class="actions-user__cart-counter">0</span>
+          <div class="cart">
             <div class="cart__header">
               <p class="cart__title-header">В вашей корзине</p>
               <p class="cart__counter-header"><span>2</span> товара</p>
             </div>
-            <ul class="list cart__list">
-              <li class="cart__item">
+            <ul class="list cart__list js-cart-list">
+              <!-- <li class="cart__item">
                 <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
                 <div class="cart__descriptions">
                   <h4 class="cart__title">Kugoo Kirin M4</h4>
@@ -99,67 +101,12 @@
                   </div>
                 </div>
                 <button class="cart__button-delete-good"></button>
-              </li>
-              <li class="cart__item">
-                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
-                <div class="cart__descriptions">
-                  <h4 class="cart__title">Kugoo Kirin M4</h4>
-                  <div class="cart__inner">
-                    <p class="cart__price-good">29 900</p>
-                    <p class="cart__counter-good"><span>1</span>шт.</p>
-                  </div>
-                </div>
-                <button class="cart__button-delete-good"></button>
-              </li>
-              <li class="cart__item">
-                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
-                <div class="cart__descriptions">
-                  <h4 class="cart__title">Kugoo Kirin M4</h4>
-                  <div class="cart__inner">
-                    <p class="cart__price-good">29 900</p>
-                    <p class="cart__counter-good"><span>1</span>шт.</p>
-                  </div>
-                </div>
-                <button class="cart__button-delete-good"></button>
-              </li>
-              <li class="cart__item">
-                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
-                <div class="cart__descriptions">
-                  <h4 class="cart__title">Kugoo Kirin M4</h4>
-                  <div class="cart__inner">
-                    <p class="cart__price-good">29 900</p>
-                    <p class="cart__counter-good"><span>1</span>шт.</p>
-                  </div>
-                </div>
-                <button class="cart__button-delete-good"></button>
-              </li>
-              <li class="cart__item">
-                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
-                <div class="cart__descriptions">
-                  <h4 class="cart__title">Kugoo Kirin M4</h4>
-                  <div class="cart__inner">
-                    <p class="cart__price-good">29 900</p>
-                    <p class="cart__counter-good"><span>1</span>шт.</p>
-                  </div>
-                </div>
-                <button class="cart__button-delete-good"></button>
-              </li>
-              <li class="cart__item">
-                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
-                <div class="cart__descriptions">
-                  <h4 class="cart__title">Kugoo Kirin M4</h4>
-                  <div class="cart__inner">
-                    <p class="cart__price-good">29 900</p>
-                    <p class="cart__counter-good"><span>1</span>шт.</p>
-                  </div>
-                </div>
-                <button class="cart__button-delete-good"></button>
-              </li>
+              </li> -->
             </ul>
             <div class="cart__footer">
               <div class="cart__sum-wrap">
                 <p class="cart__sum-text">Сумма:</p>
-                <p class="cart__sum-number">59 800 <span>₽</span></p>
+                <p class="cart__sum-number js-cart-sum-number">59 800 <span>₽</span></p>
               </div>
               <button class="cart__button">Оформить заказ</button>
             </div>
@@ -170,12 +117,20 @@
     <div class="header__bottom">
       <nav class="nav">
         <ul class="list nav-list">
-          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text">О магазине</span></a></li>
-          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text nav-list__link-text--value">Доставка и оплата</span><span class="nav-list__value">Доступна рассрочка</span></a></li>
-          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text">Тест-драйв</span></a></li>
-          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text">Блог</span></a></li>
-          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text">Контакты</span></a></li>
-          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text nav-list__link-text--value">Акции</span><span class="nav-list__value">%</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text">О
+                магазине</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text nav-list__link-text--value">Доставка и оплата</span><span
+                class="nav-list__value">Доступна рассрочка</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text">Тест-драйв</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text">Блог</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text">Контакты</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text nav-list__link-text--value">Акции</span><span
+                class="nav-list__value">%</span></a></li>
         </ul>
       </nav>
     </div>

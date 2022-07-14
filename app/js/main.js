@@ -50,10 +50,85 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "cart": () => (/* binding */ cart)
 /* harmony export */ });
 function cart() {
-  var linkCart = document.querySelector('.js-link-cart');
-  var cart = document.querySelector('.js-cart');
-  linkCart.addEventListener('click', function () {
-    cart.classList.toggle('hidden');
+  var productBtns = document.querySelectorAll('.js-product-add-to-cart');
+  var cartList = document.querySelector('.js-cart-list');
+  var cartBtn = document.querySelector('.js-cart-btn');
+  var cartBtnCounter = document.querySelector('.js-cart-btn .actions-user__cart-counter');
+  var cartFullSum = document.querySelector('.js-cart-sum-number');
+  var price = 0; //генереция случайного id
+
+  var randomId = function randomId() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  }; //убрать пробелы у цены товаров
+
+
+  var priceWithoutSpaces = function priceWithoutSpaces(str) {
+    return str.replace(/\s/g, '');
+  }; //цена в человеском виде
+
+
+  var normalPrice = function normalPrice(str) {
+    return String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+  };
+
+  var plusFullPrice = function plusFullPrice(currentPrice) {
+    return price += currentPrice;
+  };
+
+  var minusFullPrice = function minusFullPrice(currentPrice) {
+    return price -= currentPrice;
+  };
+
+  var printFullPrice = function printFullPrice() {
+    cartFullSum.textContent = "".concat(normalPrice(price), " \u20BD");
+  };
+
+  var printQuantity = function printQuantity() {
+    var lenght = cartList.children.length;
+    cartBtnCounter.textContent = lenght;
+    lenght > 0 ? cartBtn.classList.add('active') : cartBtn.classList.remove('active');
+  }; //удаление товара из корзины
+
+
+  var deleteProducts = function deleteProducts(productParent) {
+    var id = productParent.dataset.id;
+    console.log(productParent);
+    document.querySelector(".product-cards__card[data-id=\"".concat(id, "\"]")).querySelector('.product-cards__btn--incart').disabled = false;
+    var currentPrice = parseInt(priceWithoutSpaces(document.querySelector(".product-cards__card[data-id=\"".concat(id, "\"]")).querySelector('.product-cards__price-sale').textContent));
+    console.log(currentPrice);
+    minusFullPrice(currentPrice);
+    printFullPrice();
+    productParent.remove();
+    printQuantity();
+  }; //генерирование разметки товара в корзине
+
+
+  var generateCartProduct = function generateCartProduct(img, title, price, id) {
+    return "\n    <li class=\"cart__item\" data-id=\"".concat(id, "\">\n      <img class=\"cart__img\" src=\"").concat(img, "\" alt=\"\u0424\u043E\u0442\u043E \u0442\u043E\u0432\u0430\u0440\u0430\">\n      <div class=\"cart__descriptions\">\n        <h4 class=\"cart__title\">").concat(title, "</h4>\n        <div class=\"cart__inner\">\n          <p class=\"cart__price-good\">").concat(price, "</p>\n          <p class=\"cart__counter-good\"><span>1</span>\u0448\u0442.</p>\n        </div>\n      </div>\n      <button class=\"cart__button-delete-good\"></button>\n    </li>\n    ");
+  };
+
+  productBtns.forEach(function (btn) {
+    btn.closest('.product-cards__card').setAttribute('data-id', randomId());
+    btn.addEventListener('click', function (e) {
+      var self = e.currentTarget;
+      var parent = self.closest('.product-cards__card');
+      var id = parent.dataset.id;
+      var img = parent.querySelector('.product-cards__img').getAttribute('src');
+      var title = parent.querySelector('.product-cards__title').textContent; // let pricesString = parent.querySelector('.product-cards__price-sale').textContent;
+
+      var priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-cards__price-sale').textContent));
+      plusFullPrice(priceNumber);
+      cartList.insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceNumber, id));
+      printFullPrice();
+      printQuantity(); //disabled btn
+
+      self.disabled = true;
+    });
+  });
+  cartList.addEventListener('click', function (e) {
+    if (e.target.classList.contains('cart__button-delete-good')) {
+      deleteProducts(e.target.closest('.cart__item'));
+    }
   });
 }
 ;
