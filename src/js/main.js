@@ -7,6 +7,7 @@ import {accordionFaq} from './accordionFaq';
 import {dropDownLestTel} from './dropDownLestTel';
 import{modals} from './modals';
 import{cart} from './cart';
+import {diagnosticAnimation} from './diagnosticAnimation';
 window.addEventListener('DOMContentLoaded', function () {
   joicesCustome();
   customeSwiper();
@@ -17,4 +18,5 @@ window.addEventListener('DOMContentLoaded', function () {
   dropDownLestTel();
   modals();
   cart();
+  diagnosticAnimation();
 });

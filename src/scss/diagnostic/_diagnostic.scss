@@ -1,0 +1,129 @@
+.diagnostic{
+  padding: 55px 0;
+  &__title{
+    max-width: 825px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 66px;
+  }
+  &__video-bg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__list{
+    width: 297px;
+    text-align: right;
+    &--right{
+      text-align: left;
+      li:not(:last-child){
+        margin-bottom: 80px;
+      }
+
+    }
+  }
+  &__item:not(:last-child){
+    margin-bottom: 40px;
+  }
+  &__mintitle{
+    font-weight: 700;
+    font-size: 20px;
+    color: $colorBlack;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  &__descr{
+    font-size: 14px;
+    color: $colorBlack;
+  }
+  &__imgbox{
+    width: 442px;
+    position: relative;
+    transition: opacity 0.2s linear;
+    &--opacity{
+      opacity: 0;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      background-color: transparent;
+      border: 12px solid $colorLavanda;
+      border-radius: 50%;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100%;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      border: 2px dashed $colorBlueBledniVery;
+      border-radius: 50%;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 107%;
+      height: 107%;
+      }
+    img{
+      width: 100%;
+      max-width: 442px;
+      border-radius: 100%;
+    }
+  }
+  &__button-play{
+    outline: none;
+    border: none;
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 0.2s linear;
+    cursor: pointer;
+    z-index: 2;
+    &:focus,
+    &:hover{
+      background-color: $colorPurple;
+    }
+    &:focus svg,
+    &:hover svg{
+      fill: $colorWhite;
+    }
+  }
+  &__svg{
+    fill: #6F73EE;
+    transition: fill 0.2s linear;
+    pointer-events: none;
+  }
+  &__item{
+    transition: transform 0.4s linear,opacity 0.2s linear;
+    &--translate-left{
+      transform: translateX(-50%);
+      opacity: 0;
+  
+    }
+    &--translate-right{
+      transform: translateX(20%);
+      opacity: 0;
+    }
+  }
+  &__video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+  }
+}

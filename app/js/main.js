@@ -92,10 +92,8 @@ function cart() {
 
   var deleteProducts = function deleteProducts(productParent) {
     var id = productParent.dataset.id;
-    console.log(productParent);
     document.querySelector(".product-cards__card[data-id=\"".concat(id, "\"]")).querySelector('.product-cards__btn--incart').disabled = false;
     var currentPrice = parseInt(priceWithoutSpaces(document.querySelector(".product-cards__card[data-id=\"".concat(id, "\"]")).querySelector('.product-cards__price-sale').textContent));
-    console.log(currentPrice);
     minusFullPrice(currentPrice);
     printFullPrice();
     productParent.remove();
@@ -107,24 +105,26 @@ function cart() {
     return "\n    <li class=\"cart__item\" data-id=\"".concat(id, "\">\n      <img class=\"cart__img\" src=\"").concat(img, "\" alt=\"\u0424\u043E\u0442\u043E \u0442\u043E\u0432\u0430\u0440\u0430\">\n      <div class=\"cart__descriptions\">\n        <h4 class=\"cart__title\">").concat(title, "</h4>\n        <div class=\"cart__inner\">\n          <p class=\"cart__price-good\">").concat(price, "</p>\n          <p class=\"cart__counter-good\"><span>1</span>\u0448\u0442.</p>\n        </div>\n      </div>\n      <button class=\"cart__button-delete-good\"></button>\n    </li>\n    ");
   };
 
-  productBtns.forEach(function (btn) {
-    btn.closest('.product-cards__card').setAttribute('data-id', randomId());
-    btn.addEventListener('click', function (e) {
-      var self = e.currentTarget;
-      var parent = self.closest('.product-cards__card');
-      var id = parent.dataset.id;
-      var img = parent.querySelector('.product-cards__img').getAttribute('src');
-      var title = parent.querySelector('.product-cards__title').textContent; // let pricesString = parent.querySelector('.product-cards__price-sale').textContent;
+  if (productBtns.length) {
+    productBtns.forEach(function (btn) {
+      btn.closest('.product-cards__card').setAttribute('data-id', randomId());
+      btn.addEventListener('click', function (e) {
+        var self = e.currentTarget;
+        var parent = self.closest('.product-cards__card');
+        var id = parent.dataset.id;
+        var img = parent.querySelector('.product-cards__img').getAttribute('src');
+        var title = parent.querySelector('.product-cards__title').textContent;
+        var priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-cards__price-sale').textContent));
+        plusFullPrice(priceNumber);
+        cartList.insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceNumber, id));
+        printFullPrice();
+        printQuantity(); //disabled btn
 
-      var priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-cards__price-sale').textContent));
-      plusFullPrice(priceNumber);
-      cartList.insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceNumber, id));
-      printFullPrice();
-      printQuantity(); //disabled btn
-
-      self.disabled = true;
+        self.disabled = true;
+      });
     });
-  });
+  }
+
   cartList.addEventListener('click', function (e) {
     if (e.target.classList.contains('cart__button-delete-good')) {
       deleteProducts(e.target.closest('.cart__item'));
@@ -295,6 +295,46 @@ function customeSwiper() {
 
 /***/ }),
 
+/***/ "./src/js/diagnosticAnimation.js":
+/*!***************************************!*\
+  !*** ./src/js/diagnosticAnimation.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "diagnosticAnimation": () => (/* binding */ diagnosticAnimation)
+/* harmony export */ });
+function diagnosticAnimation() {
+  var diagnosticSection = document.querySelector('.js-diagnostic');
+  var diagnosticItem = document.querySelectorAll('.js-diagnostic-item');
+  var videoPlayButton = document.querySelector('.js-video-play-diagnostic');
+  var videoBox = document.querySelector('.js-video-diagnostic');
+  window.addEventListener('scroll', function () {
+    var scrollTop = window.scrollY;
+    var diagnosticCenter = diagnosticSection.offsetHeight / 2;
+
+    if (scrollTop >= diagnosticCenter) {
+      diagnosticItem.forEach(function (item) {
+        item.classList.remove('diagnostic__item--translate-left');
+        item.classList.remove('diagnostic__item--translate-right');
+      });
+      document.querySelector('.js-img-box').classList.remove('diagnostic__imgbox--opacity');
+    }
+  });
+  videoPlayButton.addEventListener('click', function () {
+    diagnosticItem.forEach(function (item) {
+      item.classList.add('diagnostic__item--translate-left');
+      item.classList.add('diagnostic__item--translate-right');
+    });
+    document.querySelector('.js-img-box').classList.add('diagnostic__imgbox--opacity');
+    videoBox.insertAdjacentHTML("beforeend", '<iframe class="diagnostic__video" width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+  });
+}
+;
+
+/***/ }),
+
 /***/ "./src/js/dropDownLestTel.js":
 /*!***********************************!*\
   !*** ./src/js/dropDownLestTel.js ***!
@@ -399,10 +439,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function playVideo() {
   var videoBoxes = document.querySelectorAll('.js-video');
-  var videoPlayButtons = document.querySelectorAll('.js-video-play');
   videoBoxes.forEach(function (el) {
     el.addEventListener('click', function (e) {
-      if (e.target.classList.contains('js-video-play')) el.insertAdjacentHTML("beforeend", '<iframe class="videos" width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+      if (e.target.classList.contains('js-video-play')) ;
+      el.insertAdjacentHTML("beforeend", '<iframe class="videos" width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
       el.querySelector('.js-video-play').remove();
     });
   });
@@ -520,6 +560,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dropDownLestTel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dropDownLestTel */ "./src/js/dropDownLestTel.js");
 /* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modals */ "./src/js/modals.js");
 /* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./cart */ "./src/js/cart.js");
+/* harmony import */ var _diagnosticAnimation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./diagnosticAnimation */ "./src/js/diagnosticAnimation.js");
+
 
 
 
@@ -539,6 +581,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_dropDownLestTel__WEBPACK_IMPORTED_MODULE_6__.dropDownLestTel)();
   (0,_modals__WEBPACK_IMPORTED_MODULE_7__.modals)();
   (0,_cart__WEBPACK_IMPORTED_MODULE_8__.cart)();
+  (0,_diagnosticAnimation__WEBPACK_IMPORTED_MODULE_9__.diagnosticAnimation)();
 });
 })();
 

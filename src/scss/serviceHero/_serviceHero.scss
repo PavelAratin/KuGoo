@@ -1,0 +1,83 @@
+.service-hero{
+  border-radius: 10px;
+  background: radial-gradient(74.38% 244.23% at 75.04% 76.25%, #FFC960 0%, #F3A712 100%);
+  width: calc(100% - 35px);
+  margin: 0 auto;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left{
+    padding: 60px 0;
+    width: 770px;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 35px;
+    color: $colorWhite;
+    line-height: 1.4;
+    text-transform: uppercase;
+    max-width: 504px;
+    margin-bottom: 10px;
+  }
+  &__subtitle{
+    font-size: 20px;
+    color: $colorWhite;
+    margin-bottom: 30px;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 42px;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-right: 30px;
+    }
+    &:first-child{
+      width: 268px;
+    }
+    &:nth-child(2){
+      width: 167px;
+    }
+    &:last-child{
+      width: 265px;
+    }
+    span{
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      margin-right: 15px;
+      flex-shrink: 0;
+      svg{
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+  &__text{
+    font-weight: 500;
+    font-size: 14px;
+    color: $colorWhite;
+  }
+  &__button{
+    background-color: $colorWhite;
+    border-radius: 5px;
+    padding: 15px 41px;
+    color: $colorOrange;
+    font-size: 16px;
+    border: none;
+  }
+  &__img{
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+  }
+}

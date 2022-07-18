@@ -36,10 +36,8 @@ export function cart() {
   //удаление товара из корзины
   const deleteProducts = (productParent) => {
     let id = productParent.dataset.id;
-    console.log(productParent)
     document.querySelector(`.product-cards__card[data-id="${id}"]`).querySelector('.product-cards__btn--incart').disabled = false;
     let currentPrice = parseInt(priceWithoutSpaces(document.querySelector(`.product-cards__card[data-id="${id}"]`).querySelector('.product-cards__price-sale').textContent));
-    console.log(currentPrice)
     minusFullPrice(currentPrice);
     printFullPrice();
     productParent.remove();
@@ -61,26 +59,25 @@ export function cart() {
     </li>
     `;
   };
-  productBtns.forEach(function (btn) {
-    btn.closest('.product-cards__card').setAttribute('data-id', randomId());
-    btn.addEventListener('click', function (e) {
-      let self = e.currentTarget;
-      let parent = self.closest('.product-cards__card');
-      let id = parent.dataset.id;
-      let img = parent.querySelector('.product-cards__img').getAttribute('src');
-      let title = parent.querySelector('.product-cards__title').textContent;
-      // let pricesString = parent.querySelector('.product-cards__price-sale').textContent;
-      let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-cards__price-sale').textContent));
-
-      plusFullPrice(priceNumber);
-      cartList.insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceNumber, id))
-      printFullPrice()
-      printQuantity()
-
-      //disabled btn
-      self.disabled = true;
+  if(productBtns.length){
+    productBtns.forEach(function (btn) {
+      btn.closest('.product-cards__card').setAttribute('data-id', randomId());
+      btn.addEventListener('click', function (e) {
+        let self = e.currentTarget;
+        let parent = self.closest('.product-cards__card');
+        let id = parent.dataset.id;
+        let img = parent.querySelector('.product-cards__img').getAttribute('src');
+        let title = parent.querySelector('.product-cards__title').textContent;
+        let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-cards__price-sale').textContent));
+        plusFullPrice(priceNumber);
+        cartList.insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceNumber, id))
+        printFullPrice()
+        printQuantity()
+        //disabled btn
+        self.disabled = true;
+      });
     });
-  });
+  }
   cartList.addEventListener('click', function (e) {
     if (e.target.classList.contains('cart__button-delete-good')) {
       deleteProducts(e.target.closest('.cart__item'))
