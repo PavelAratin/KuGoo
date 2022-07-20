@@ -486,6 +486,93 @@ function tabOffes() {
   }
 }
 
+/***/ }),
+
+/***/ "./src/js/tabTitles.js":
+/*!*****************************!*\
+  !*** ./src/js/tabTitles.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "tabTitles": () => (/* binding */ tabTitles)
+/* harmony export */ });
+function tabTitles() {
+  var electrosamocatTitle = document.querySelectorAll('[data-title-electrosamocat]');
+  var electrosamocatList = document.querySelectorAll('[data-controlers-electrosamocat]');
+  var electrovelosipedTitle = document.querySelectorAll('[data-title-electrovelosiped]');
+  var electrovelosipedList = document.querySelectorAll('[data-controlers-electrovelosiped]');
+  var robotTitle = document.querySelectorAll('[data-title-robot]');
+  var robotList = document.querySelectorAll('[data-controlers-robot]'); //активный класс удаляется у всех тайтлов , можно потом пофиксить или вообще оптимизировать этот код
+
+  var electrosamocatParentWrapTitles = document.querySelectorAll('.titles-goods__item');
+  electrosamocatTitle.forEach(function (title) {
+    title.addEventListener('click', function () {
+      var currentTab = title.dataset.titleElectrosamocat;
+      var parentCurrentTab = title.closest('.titles-goods__item');
+      var currentController = document.querySelector("[data-controlers-electrosamocat=\"".concat(currentTab, "\"]"));
+      electrosamocatParentWrapTitles.forEach(function (li) {
+        li.classList.remove('active');
+      });
+
+      if (parentCurrentTab.classList.contains('active')) {
+        parentCurrentTab.classList.remove('active');
+      } else {
+        parentCurrentTab.classList.add('active');
+      }
+
+      electrosamocatList.forEach(function (item) {
+        item.classList.add('js-hidden');
+      });
+      currentController.classList.remove('js-hidden');
+    });
+  });
+  electrovelosipedTitle.forEach(function (title) {
+    title.addEventListener('click', function () {
+      var currentTab = title.dataset.titleElectrovelosiped;
+      var parentCurrentTab = title.closest('.titles-goods__item');
+      var currentController = document.querySelector("[data-controlers-electrovelosiped=\"".concat(currentTab, "\"]"));
+      electrosamocatParentWrapTitles.forEach(function (li) {
+        li.classList.remove('active');
+      });
+
+      if (parentCurrentTab.classList.contains('active')) {
+        parentCurrentTab.classList.remove('active');
+      } else {
+        parentCurrentTab.classList.add('active');
+      }
+
+      electrovelosipedList.forEach(function (item) {
+        item.classList.add('js-hidden');
+      });
+      currentController.classList.remove('js-hidden');
+    });
+  });
+  robotTitle.forEach(function (title) {
+    title.addEventListener('click', function () {
+      var currentTab = title.dataset.titleRobot;
+      var parentCurrentTab = title.closest('.titles-goods__item');
+      var currentController = document.querySelector("[data-controlers-robot=\"".concat(currentTab, "\"]"));
+      electrosamocatParentWrapTitles.forEach(function (li) {
+        li.classList.remove('active');
+      });
+
+      if (parentCurrentTab.classList.contains('active')) {
+        parentCurrentTab.classList.remove('active');
+      } else {
+        parentCurrentTab.classList.add('active');
+      }
+
+      robotList.forEach(function (item) {
+        item.classList.add('js-hidden');
+      });
+      currentController.classList.remove('js-hidden');
+    });
+  });
+}
+;
+
 /***/ })
 
 /******/ 	});
@@ -561,6 +648,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modals */ "./src/js/modals.js");
 /* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./cart */ "./src/js/cart.js");
 /* harmony import */ var _diagnosticAnimation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./diagnosticAnimation */ "./src/js/diagnosticAnimation.js");
+/* harmony import */ var _tabTitles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./tabTitles */ "./src/js/tabTitles.js");
+
 
 
 
@@ -582,6 +671,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_modals__WEBPACK_IMPORTED_MODULE_7__.modals)();
   (0,_cart__WEBPACK_IMPORTED_MODULE_8__.cart)();
   (0,_diagnosticAnimation__WEBPACK_IMPORTED_MODULE_9__.diagnosticAnimation)();
+  (0,_tabTitles__WEBPACK_IMPORTED_MODULE_10__.tabTitles)();
 });
 })();
 

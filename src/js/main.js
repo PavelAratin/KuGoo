@@ -8,6 +8,7 @@ import {dropDownLestTel} from './dropDownLestTel';
 import{modals} from './modals';
 import{cart} from './cart';
 import {diagnosticAnimation} from './diagnosticAnimation';
+import {tabTitles} from './tabTitles';
 window.addEventListener('DOMContentLoaded', function () {
   joicesCustome();
   customeSwiper();
@@ -19,4 +20,5 @@ window.addEventListener('DOMContentLoaded', function () {
   modals();
   cart();
   diagnosticAnimation();
+  tabTitles();
 });

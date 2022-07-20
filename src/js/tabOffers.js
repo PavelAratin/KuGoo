@@ -1,5 +1,5 @@
 export function tabOffes(){
-  const offerButtons  = document.querySelectorAll('[data-tab]');
+  const offerButtons = document.querySelectorAll('[data-tab]');
   const tabContents = document.querySelectorAll(`[data-content]`);
   if(offerButtons.length){
     offerButtons.forEach((el,index)=>{
@@ -13,7 +13,6 @@ export function tabOffes(){
           btn.classList.remove('active')
         });
         this.classList.add('active');
-  
         tabContents.forEach((elem)=>{
           elem.classList.add('js-offers-tab-hidden')
         });

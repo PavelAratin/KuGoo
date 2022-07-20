@@ -1764,7 +1764,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .js-offers-tab-hidden {
-  display: none;
+  display: none !important;
 }
 
 .video {
@@ -2948,6 +2948,124 @@ input[type=search]::-webkit-search-results-decoration {
   bottom: 0;
   right: 0;
   z-index: 11;
+}
+
+.repair-cost {
+  padding: 55px 0;
+}
+.repair-cost__title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.repair-cost__subtitle {
+  font-size: 16px;
+  color: #282739;
+  max-width: 635px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 45px;
+}
+
+.repair-cost-tabs__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 87px;
+}
+.repair-cost-tabs__item:not(:last-child) {
+  margin-right: 20px;
+}
+.repair-cost-tabs__button {
+  padding: 15px 25px;
+  border-radius: 5px;
+  background-color: #F4F7FB;
+  border: none;
+  color: #5d667b;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.2s linear, background 0.2s linear, color 0.2s linear;
+}
+.repair-cost-tabs__button.active, .repair-cost-tabs__button:hover {
+  box-shadow: 0 0 0 2px #6F73EE;
+  background-color: transparent;
+  color: #6F73EE;
+}
+.repair-cost-tabs__content {
+  display: flex;
+}
+.repair-cost-tabs__goods-titles {
+  width: 25%;
+  background-color: #F4F7FB;
+  padding: 17px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 32px;
+}
+
+.titles-goods {
+  width: 100%;
+}
+.titles-goods__item {
+  padding: 11px 32px;
+  position: relative;
+}
+.titles-goods__item.active {
+  background-color: #ffffff;
+}
+.titles-goods__item.active p {
+  color: #6F73EE;
+}
+.titles-goods__item.active::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #6F73EE;
+}
+.titles-goods__mintitle {
+  font-weight: 500;
+  font-size: 18px;
+  color: #282739;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+.titles-goods__mintitle:hover {
+  color: #6F73EE;
+}
+
+.controllers {
+  border: 2px solid #EAEBED;
+  border-radius: 5px;
+  width: calc(75% - 30px);
+}
+
+.controllers-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 30px;
+}
+.controllers-list__item:not(:last-child) {
+  border-bottom: 1px solid #EAEBED;
+}
+.controllers-list__job {
+  font-size: 16px;
+  color: #282739;
+}
+.controllers-list__cost {
+  font-weight: 500;
+  font-size: 16px;
+  color: #282739;
+}
+
+.js-hidden {
+  display: none;
 }
 
 @media screen and (max-width: 1350px) {

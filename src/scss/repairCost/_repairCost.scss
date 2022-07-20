@@ -1,0 +1,117 @@
+.repair-cost{
+  padding: 55px 0;
+  &__title{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    color: $colorBlack;
+    max-width: 635px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 45px;
+  }
+}
+.repair-cost-tabs{
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 87px;
+  }
+  &__item:not(:last-child){
+    margin-right: 20px;
+  }
+  &__button{
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: $colorLavanda;
+    border: none;
+    color: $colorGrey600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.2s linear,background 0.2s linear,color 0.2s linear;
+    &.active,
+    &:hover{
+      box-shadow: 0 0 0 2px $colorPurple;
+      background-color: transparent;
+      color: $colorPurple;
+    }
+  }
+  &__content{
+    display: flex;
+  }
+  &__goods-titles{
+    width: calc(100% - 75%);
+    background-color: $colorLavanda;
+    padding: 17px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 32px;
+  }
+}
+.titles-goods{
+  width: 100%;
+  &__item{
+    padding: 11px 32px;
+    position: relative;
+    &.active{
+      background-color: $colorWhite;
+    }
+    &.active p{
+      color: $colorPurple;
+    }
+    &.active::before{
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $colorPurple;
+    }
+  }
+  &__mintitle{
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorBlack;
+    transition: color 0.2s linear;
+    cursor: pointer;
+    &:hover{
+      color: $colorPurple;
+    }
+  }
+}
+.controllers{
+  border: 2px solid $colorBlueBledniVery;
+  border-radius: 5px;
+  width: calc(100% - 25% - 30px);
+}
+.controllers-list{
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 21px 30px;
+    &:not(:last-child){
+      border-bottom: 1px solid $colorBlueBledniVery;
+    }
+  }
+  &__job{
+    font-size: 16px;
+    color: $colorBlack;
+  }
+  &__cost{
+    font-weight: 500;
+    font-size: 16px;
+    color: $colorBlack;
+  }
+}
+.js-hidden{
+  display: none;
+}
