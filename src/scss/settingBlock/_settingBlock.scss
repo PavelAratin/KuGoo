@@ -1,0 +1,15 @@
+.setting{
+  padding: 55px 0;
+  &__wrapper{
+    display: flex;
+  }
+  &__img{
+    width: 100%;
+    max-width: 610px;
+    height: auto;
+    object-fit: cover;
+  }
+  .block-content{
+    margin-right: 30px;
+  }
+}

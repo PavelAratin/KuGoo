@@ -1,0 +1,64 @@
+.gidroizol{
+  padding: 40px 0;
+  padding-left: 30px;
+  &__wrapper{
+    display: flex;
+  }
+  &__img{
+    width: calc(703 / 1360 * 100%);
+    border-radius: 5px;
+    height: auto;
+    object-fit: cover;
+    margin-right: max(30px,calc((100% - 1360px) / 12));
+  }
+  &__content{
+    max-width: 590px;
+  }
+}
+.block-content{
+  &__title{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  &__text{
+    font-size: 16px;
+    color: $colorBlack;
+    line-height: 1.4;
+    &--subtitle{
+      margin-bottom: 24px;
+    }
+    &--descr{
+      margin-bottom: 23px;
+    }
+    a{
+      color: $colorPurple;
+      text-decoration: none;
+      transition: opacity 0.2s linear;
+      outline: none;
+      &:hover,
+      &:focus{
+        opacity: 0.5;
+      }
+    }
+  }
+  &__list-title{
+    font-weight: 500;
+    font-size: 16px;
+    color: $colorBlack;
+    margin-bottom: 15px;
+  }
+  &__list{
+    margin-bottom: 20px;
+    p{
+    padding-left: 27px;
+    background-position: left center;
+    background-size: 17px 17px;
+    background-repeat: no-repeat;
+    background-image: url('../img/circle-click.svg');
+    }
+  }
+  &__item:not(:last-child){
+    margin-bottom: 15px;
+  }
+}
