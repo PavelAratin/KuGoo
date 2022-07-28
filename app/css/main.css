@@ -3190,6 +3190,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .setting__wrapper {
   display: flex;
+  align-items: center;
 }
 .setting__img {
   width: 100%;
@@ -3197,9 +3198,73 @@ input[type=search]::-webkit-search-results-decoration {
   height: auto;
   -o-object-fit: cover;
   object-fit: cover;
+  border-radius: 5px;
 }
 .setting .block-content {
   margin-right: 30px;
+}
+
+.team-service {
+  padding: 55px 0;
+}
+.team-service__title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team-service__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.team-service__spec {
+  display: flex;
+  align-items: center;
+  width: calc(50% - 25px);
+  border-radius: 10px;
+  border: 1px solid #EAEBED;
+  padding: 23px 19px 23px 120px;
+  background-repeat: no-repeat;
+  background-position: left 36px center;
+  background-size: 52px 52px;
+}
+.team-service__spec--specialists {
+  background-image: url("../img/team-service-pic1.png");
+}
+.team-service__spec--consultant {
+  background-image: url("../img/team-service-pic2.png");
+}
+.team-service__descr {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.team-service__imgbox {
+  position: relative;
+}
+.team-service__imgbox::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background-color: #6F73EE;
+}
+.team-service__img {
+  width: 100%;
+  height: auto;
+}
+.team-service__employee {
+  padding: 20px 15px 0 15px;
+  text-align: center;
+}
+.team-service__name {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.team-service__job-title {
+  font-size: 14px;
+  color: #5d667b;
 }
 
 @media screen and (max-width: 1350px) {

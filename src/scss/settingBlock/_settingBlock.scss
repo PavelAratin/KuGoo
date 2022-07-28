@@ -2,12 +2,14 @@
   padding: 55px 0;
   &__wrapper{
     display: flex;
+    align-items: center;
   }
   &__img{
     width: 100%;
     max-width: 610px;
     height: auto;
     object-fit: cover;
+    border-radius: 5px;
   }
   .block-content{
     margin-right: 30px;

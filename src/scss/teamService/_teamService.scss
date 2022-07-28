@@ -1,0 +1,62 @@
+.team-service{
+  padding: 55px 0;
+  &__title{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__spec{
+    display: flex;
+    align-items: center;
+    width: calc(50% - 25px);
+    border-radius: 10px;
+    border: 1px solid $colorBlueBledniVery;
+    padding: 23px 19px 23px 120px;
+    background-repeat: no-repeat;
+    background-position: left 36px center;
+    background-size: 52px 52px;
+    &--specialists{
+      background-image: url('../img/team-service-pic1.png');
+    }
+    &--consultant{
+      background-image: url('../img/team-service-pic2.png');
+    }
+  }
+  &__descr{
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  &__imgbox{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background-color: $colorPurple;
+    }
+  }
+  &__img{
+    width: 100%;
+    height: auto;
+  }
+  &__employee{
+    padding: 20px 15px 0 15px;
+    text-align: center;
+  }
+  &__name{
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  &__job-title{
+    font-size: 14px;
+    color: $colorGrey600;
+  }
+}

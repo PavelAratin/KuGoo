@@ -3,6 +3,7 @@ export function customeSwiper() {
   const minPicSwipers = document.querySelectorAll('.js-product-card-swiper-minpic');
   const videoObserv = document.querySelector('.js-video-observ');
   const articlesSwiper = document.querySelector('.js-articles-swiper');
+  const teamServiceSwiper = document.querySelector('.js-team-service-swiper');
   if (heroSwiper) {
     new Swiper(heroSwiper, {
       direction: 'horizontal',
@@ -75,6 +76,18 @@ export function customeSwiper() {
           spaceBetween: 50,
           slidesPerView: 4,
         }
+      }
+    });
+  }
+  if (teamServiceSwiper) {
+    new Swiper(teamServiceSwiper, {
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 4,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.js-team-service-button-next',
+        prevEl: '.js-team-service-button-prev',
       }
     });
   }
