@@ -83,11 +83,25 @@ export function customeSwiper() {
     new Swiper(teamServiceSwiper, {
       direction: 'horizontal',
       loop: false,
-      slidesPerView: 4,
-      spaceBetween: 50,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
       navigation: {
         nextEl: '.js-team-service-button-next',
         prevEl: '.js-team-service-button-prev',
+      },
+      breakpoints:{
+        320:{
+          slidesPerView: 1,
+        },
+        768:{
+          slidesPerView: 2,
+        },
+        900:{
+          slidesPerView: 3,
+        },
+        1200:{
+          slidesPerView: 'auto',
+        }
       }
     });
   }

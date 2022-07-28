@@ -72,6 +72,9 @@
   .footer-adreses{
     width: 500px;
   }
+  .team-service .swiper{
+    width: auto;
+  }
 
 }
 @media screen and(max-width: 1100px){
@@ -120,6 +123,9 @@
     margin-top: 20px;
     grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
     grid-gap: 30px;
+  }
+  .diagnostic__imgbox {
+    display: none;
   }
 }
 @media screen and(max-width: 1000px){
@@ -210,6 +216,15 @@
     width: 100%;
     margin: 0;
   }
+  .service-hero__img{
+    display: none;
+  }
+  .service-hero__left{
+    width: 100%;
+  }
+  .setting{
+    display: none;
+  }
 }
 @media screen and(max-width: 900px){
   .actions-user{
@@ -252,7 +267,12 @@
   .video-observ,
   .faq,
   .popular-buy,
-  .footer__wrapper{
+  .footer__wrapper,
+  .service-hero__left,
+  .diagnostic,
+  .repair-cost,
+  .determin,
+  .official-magazine{
     padding: 20px 0;
   }
   .reviews{
@@ -262,7 +282,8 @@
     }
   }
   .delivery-free,
-  .video{
+  .video,
+  .determin{
     margin: 20px auto;
   }
   .video{
@@ -404,5 +425,85 @@
   .privacy-policy__chat{
     margin-right: 10px;
     margin-bottom: 10px;
+  }
+  .service-hero__title{
+    font-size: 25px;
+  }
+  .diagnostic__video-bg{
+    flex-wrap: wrap;
+  }
+  .diagnostic__list{
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    &--left{
+      margin-bottom: 20px;
+    }
+  }
+  .diagnostic__list--right li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .diagnostic__title{
+    margin-bottom: 20px;
+  }
+  .repair-cost-tabs__goods-titles{
+    display: none;
+  }
+  .controllers{
+    width: 100%;
+  }
+  .repair-cost-tabs__list{
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .repair-cost-tabs__item{
+      width: 100%;
+      button{
+        width: 100%;
+      }
+  }
+  .repair-cost-tabs__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .determin__imgbox{
+    display: none;
+  }
+  .determin__content{
+    width: 100%;
+  }
+  .gidroizol__img{
+    display: none;
+  }
+  .team-service__wrapper{
+    flex-wrap: wrap;
+  }
+  .team-service__spec{
+    width: 100%;
+  }
+  .team-service__spec:not(:last-child){
+    margin-bottom: 20px;
+  }
+  .team-service__spec{
+    background-position: left 14px center;
+    background-size: 40px 40px;
+    padding-left: 80px;
+  }
+  .team-service .swiper-button-next,
+  .team-service .swiper-button-prev{
+    width: 40px;
+    height: 40px;
+  }
+  .official-magazine__head{
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .official-magazine__wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  .official-magazine__img--big,
+  .official-magazine__img--small{
+    grid-column: auto;
   }
 }

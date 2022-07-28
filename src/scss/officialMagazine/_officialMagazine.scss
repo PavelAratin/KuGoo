@@ -1,0 +1,59 @@
+.official-magazine{
+  padding: 55px 0;
+  &__title{
+    margin-bottom: 43px;
+    max-width: 393px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-right: 10px;
+  }
+  &__img{
+    border-radius: 10px;
+    width: 100%;
+    align-self: stretch;
+    object-fit: cover;
+    &--big{
+      grid-column: span 4;
+    }
+    &--small{
+      grid-column: span 3;
+    }
+  }
+  &__wrapper{
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    grid-gap: 30px;
+  }
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &__shield{
+    padding: 14px 14px 14px 92px;
+    background-color: $colorPurple;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+    background-size: 46px 46px;
+    background-image: url('../img/instrument.png');
+    width: fit-content;
+  }
+  &__value{
+    font-size: 12px;
+    color: $colorWhite;
+    opacity: 0.5;
+    margin-bottom: 5px;
+    display: block;
+  }
+  &__text-bold{
+    font-weight: 600;
+    font-size: 20px;
+    color: $colorWhite;
+    margin-bottom: 5px;
+  }
+  &__text{
+    font-size: 12px;
+    color: $colorWhite;
+  }
+}

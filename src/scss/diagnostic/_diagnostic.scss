@@ -15,12 +15,15 @@
   &__list{
     width: 297px;
     text-align: right;
+    &--left{
+      margin-right: 40px;
+    }
     &--right{
       text-align: left;
+      margin-left: 40px;
       li:not(:last-child){
         margin-bottom: 80px;
       }
-
     }
   }
   &__item:not(:last-child){

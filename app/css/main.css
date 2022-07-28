@@ -2773,10 +2773,12 @@ input[type=search]::-webkit-search-results-decoration {
   align-items: center;
   width: 100%;
   margin-bottom: 42px;
+  flex-wrap: wrap;
 }
 .service-hero__item {
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
 }
 .service-hero__item:not(:last-child) {
   margin-right: 30px;
@@ -2844,8 +2846,12 @@ input[type=search]::-webkit-search-results-decoration {
   width: 297px;
   text-align: right;
 }
+.diagnostic__list--left {
+  margin-right: 40px;
+}
 .diagnostic__list--right {
   text-align: left;
+  margin-left: 40px;
 }
 .diagnostic__list--right li:not(:last-child) {
   margin-bottom: 80px;
@@ -3127,6 +3133,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .gidroizol__wrapper {
   display: flex;
+  margin-right: 20px;
 }
 .gidroizol__img {
   width: 51.6911764706%;
@@ -3207,6 +3214,9 @@ input[type=search]::-webkit-search-results-decoration {
 .team-service {
   padding: 55px 0;
 }
+.team-service__container {
+  position: relative;
+}
 .team-service__title {
   text-transform: uppercase;
   text-align: center;
@@ -3215,6 +3225,10 @@ input[type=search]::-webkit-search-results-decoration {
 .team-service__wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 67px;
+}
+.team-service__swiper-wrapper {
+  position: relative;
 }
 .team-service__spec {
   display: flex;
@@ -3265,6 +3279,98 @@ input[type=search]::-webkit-search-results-decoration {
 .team-service__job-title {
   font-size: 14px;
   color: #5d667b;
+}
+.team-service .swiper {
+  width: 100vw;
+}
+.team-service .swiper-slide {
+  width: 255px;
+}
+.team-service .swiper-button-next:after,
+.team-service .swiper-button-prev:after {
+  content: "";
+}
+.team-service .swiper-button-next,
+.team-service .swiper-button-prev {
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  background-color: #6F73EE;
+  border: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 10px 18px;
+  top: 50%;
+}
+.team-service .swiper-button-next {
+  background-image: url(../img/arrow-white-right1.svg);
+}
+.team-service .swiper-button-prev {
+  transform: rotate(-180deg);
+  background-image: url(../img/arrow-white-right1.svg);
+}
+
+.official-magazine {
+  padding: 55px 0;
+}
+.official-magazine__title {
+  margin-bottom: 43px;
+  max-width: 393px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-right: 10px;
+}
+.official-magazine__img {
+  border-radius: 10px;
+  width: 100%;
+  align-self: stretch;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.official-magazine__img--big {
+  grid-column: span 4;
+}
+.official-magazine__img--small {
+  grid-column: span 3;
+}
+.official-magazine__wrapper {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-gap: 30px;
+}
+.official-magazine__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.official-magazine__shield {
+  padding: 14px 14px 14px 92px;
+  background-color: #6F73EE;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+  background-size: 46px 46px;
+  background-image: url("../img/instrument.png");
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.official-magazine__value {
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-bottom: 5px;
+  display: block;
+}
+.official-magazine__text-bold {
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.official-magazine__text {
+  font-size: 12px;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1350px) {
@@ -3355,6 +3461,10 @@ input[type=search]::-webkit-search-results-decoration {
   .footer-adreses {
     width: 500px;
   }
+
+  .team-service .swiper {
+    width: auto;
+  }
 }
 @media screen and (max-width: 1100px) {
   .official-dealer .testdrive {
@@ -3413,6 +3523,10 @@ input[type=search]::-webkit-search-results-decoration {
     margin-top: 20px;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 30px;
+  }
+
+  .diagnostic__imgbox {
+    display: none;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -3527,6 +3641,18 @@ input[type=search]::-webkit-search-results-decoration {
     width: 100%;
     margin: 0;
   }
+
+  .service-hero__img {
+    display: none;
+  }
+
+  .service-hero__left {
+    width: 100%;
+  }
+
+  .setting {
+    display: none;
+  }
 }
 @media screen and (max-width: 900px) {
   .actions-user {
@@ -3573,7 +3699,12 @@ input[type=search]::-webkit-search-results-decoration {
 .video-observ,
 .faq,
 .popular-buy,
-.footer__wrapper {
+.footer__wrapper,
+.service-hero__left,
+.diagnostic,
+.repair-cost,
+.determin,
+.official-magazine {
     padding: 20px 0;
   }
 
@@ -3585,7 +3716,8 @@ input[type=search]::-webkit-search-results-decoration {
   }
 
   .delivery-free,
-.video {
+.video,
+.determin {
     margin: 20px auto;
   }
 
@@ -3765,6 +3897,107 @@ input[type=search]::-webkit-search-results-decoration {
 .privacy-policy__chat {
     margin-right: 10px;
     margin-bottom: 10px;
+  }
+
+  .service-hero__title {
+    font-size: 25px;
+  }
+
+  .diagnostic__video-bg {
+    flex-wrap: wrap;
+  }
+
+  .diagnostic__list {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  .diagnostic__list--left {
+    margin-bottom: 20px;
+  }
+
+  .diagnostic__list--right li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .diagnostic__title {
+    margin-bottom: 20px;
+  }
+
+  .repair-cost-tabs__goods-titles {
+    display: none;
+  }
+
+  .controllers {
+    width: 100%;
+  }
+
+  .repair-cost-tabs__list {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .repair-cost-tabs__item {
+    width: 100%;
+  }
+  .repair-cost-tabs__item button {
+    width: 100%;
+  }
+
+  .repair-cost-tabs__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .determin__imgbox {
+    display: none;
+  }
+
+  .determin__content {
+    width: 100%;
+  }
+
+  .gidroizol__img {
+    display: none;
+  }
+
+  .team-service__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .team-service__spec {
+    width: 100%;
+  }
+
+  .team-service__spec:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .team-service__spec {
+    background-position: left 14px center;
+    background-size: 40px 40px;
+    padding-left: 80px;
+  }
+
+  .team-service .swiper-button-next,
+.team-service .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+
+  .official-magazine__head {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .official-magazine__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  .official-magazine__img--big,
+.official-magazine__img--small {
+    grid-column: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */
