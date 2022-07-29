@@ -1,0 +1,112 @@
+.cooperation-hero{
+  padding: 40px 0;
+  width: calc(100% - 35px);
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: $colorLavanda;
+  &__container{
+    display: flex;
+  }
+  &__content{
+    margin-right: 10px;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  &__subtitle{
+    font-size: 20px;
+    margin-bottom: 34px;
+  }
+}
+.cooperation-benefits-list{
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    column-gap: 32px;
+    row-gap: 21px;
+  &__item{
+    display: flex;
+    align-items: center;
+  }
+  span{
+    padding: 12px;
+    background: rgba(111, 115, 238, 0.1);
+    border-radius: 5px;
+    margin-right: 15px;
+    line-height: 0;
+  }
+  &__svg{
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.form{
+  width: 377px;
+  border-radius: 5px;
+  background-color: $colorPurple;
+  padding: 31px 20px;
+  &__title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $colorWhite;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 7px;
+    max-width: 245px;
+    margin: 0 auto;
+  }
+  &__subtitle{
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    color: $colorWhite;
+    max-width: 245px;
+    margin: 0 auto 28px auto;
+  }
+  &__input{
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 25px;
+    color: $colorWhite;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    transition: box-shadow 0.2s linear;
+    cursor: pointer;
+    &::placeholder{
+      color: $colorWhite;
+    }
+    &:hover{
+      box-shadow: 0 0 3px $colorWhite;
+    }
+  }
+  &__button{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: $colorWhite;
+    color: $colorPurple;
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.2s linear,background 0.2s linear,color 0.2s linear;
+    &:hover{
+      box-shadow: 0 0 3px $colorWhite;
+      background-color: transparent;
+      color: $colorWhite;
+    }
+  }
+  .custome-checkbox__label{
+    color: $colorWhite;
+  }
+  
+}

@@ -3373,6 +3373,126 @@ input[type=search]::-webkit-search-results-decoration {
   color: #ffffff;
 }
 
+.cooperation-hero {
+  padding: 40px 0;
+  width: calc(100% - 35px);
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: #F4F7FB;
+}
+.cooperation-hero__container {
+  display: flex;
+}
+.cooperation-hero__content {
+  margin-right: 10px;
+}
+.cooperation-hero__title {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.cooperation-hero__subtitle {
+  font-size: 20px;
+  margin-bottom: 34px;
+}
+
+.cooperation-benefits-list {
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  -moz-column-gap: 32px;
+  column-gap: 32px;
+  row-gap: 21px;
+}
+.cooperation-benefits-list__item {
+  display: flex;
+  align-items: center;
+}
+.cooperation-benefits-list span {
+  padding: 12px;
+  background: rgba(111, 115, 238, 0.1);
+  border-radius: 5px;
+  margin-right: 15px;
+  line-height: 0;
+}
+.cooperation-benefits-list__svg {
+  width: 16px;
+  height: 16px;
+}
+
+.form {
+  width: 377px;
+  border-radius: 5px;
+  background-color: #6F73EE;
+  padding: 31px 20px;
+}
+.form__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 7px;
+  max-width: 245px;
+  margin: 0 auto;
+}
+.form__subtitle {
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  color: #ffffff;
+  max-width: 245px;
+  margin: 0 auto 28px auto;
+}
+.form__input {
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 25px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  transition: box-shadow 0.2s linear;
+  cursor: pointer;
+}
+.form__input::-moz-placeholder {
+  color: #ffffff;
+}
+.form__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.form__input::placeholder {
+  color: #ffffff;
+}
+.form__input:hover {
+  box-shadow: 0 0 3px #ffffff;
+}
+.form__button {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #6F73EE;
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.2s linear, background 0.2s linear, color 0.2s linear;
+}
+.form__button:hover {
+  box-shadow: 0 0 3px #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+.form .custome-checkbox__label {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1350px) {
   .delivery-free__img {
     width: 580px;

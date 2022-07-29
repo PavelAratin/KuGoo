@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./joices/choices.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Сотрудничество</title>
+  <script defer src="./swiper/swiper.min.js"></script>
+  <script defer src="./joices/choices.min.js"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <div class="header__top">
+      <ul class="list header__list-top">
+        <li class="header__item-top"><a href="servis.html" class="link header__link-top"><span
+              class="header__link-top-text">Сервис</span></a></li>
+        <li class="header__item-top"><a href="cooperation.html" class="link header__link-top"><span
+              class="header__link-top-text">Сотрудничество</span></a></li>
+        <li class="header__item-top"><a href="#" class="link header__link-top js-modal-callback-trigger"><span
+              class="header__link-top-text">Заказать звонок</span></a></li>
+      </ul>
+      <ul class="list social-list header__social-list">
+        <li class="social-list__item">
+          <a href="#" class="link social-list__link">
+            <svg class="social-list__svg social-list__svg--call">
+              <use xlink:href="img/sprite.svg#call-grey"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="link social-list__link">
+            <svg class="social-list__svg social-list__svg--whatsapp">
+              <use xlink:href="img/sprite.svg#whatsapp-gray"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="link social-list__link">
+            <svg class="social-list__svg social-list__svg--telegram">
+              <use xlink:href="img/sprite.svg#telegtram-grey"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="header__top-wrapper">
+        <a class="tel header__tel" href="tel:+78005055461">
+          <span>+7(800)505-54-61</span>
+        </a>
+        <svg class="header__tel-pic js-header-tel">
+          <use xlink:href="img/sprite.svg#plus-round-grey"></use>
+        </svg>
+      </div>
+      <ul class="list dropdown-list-tel js-dropdown-list-tel">
+        <li class="dropdown-list-tel__item">
+          <p class="dropdown-list-tel__text">Сервисный центр</p>
+          <a href="tel:+74993507692" class="tel dropdown-list-tel__link">+ 7 (499) 350 76 92</a>
+        </li>
+        <li class="dropdown-list-tel__item">
+          <p class="dropdown-list-tel__text">Оптовый отдел</p>
+          <a href="tel:+74992816452" class="tel dropdown-list-tel__link">+7 (499) 281-64-52</a>
+          <p class="dropdown-list-tel__text dropdown-list-tel__text--bold">пн-сб 10:00 - 19:00</p>
+        </li>
+        <li class="dropdown-list-tel__item">
+          <p class="dropdown-list-tel__text">Отдел рекламаций и претензий</p>
+          <a href="tel:+74993507692" class="tel dropdown-list-tel__link">+7 (499) 350-76-92</a>
+          <p class="dropdown-list-tel__text dropdown-list-tel__text--bold">пн-сб 10:00 - 19:00</p>
+        </li>
+      </ul>
+    </div>
+    <div class="header__middle">
+      <a href="index.html" class="logo logo--header link">KUGOO</a>
+      <button class="button-catalog button-catalog--header">
+        <div class="burger burger--header">
+          <span class="burger__line burger__line--top"></span>
+          <span class="burger__line burger__line--middle"></span>
+          <span class="burger__line burger__line--bottom"></span>
+        </div>
+        Каталог
+      </button>
+      <form action="#" class="search-form search-form--header">
+        <select name="search-select" class="js-choice">
+          <option value="Везде">Везде</option>
+          <option value="Самокаты">Самокаты</option>
+          <option value="Аксессуары">Аксессуары</option>
+        </select>
+        <input class="search-form__input" type="search" placeholder="Искать самокат KUGO">
+        <button class="search-form__button" type="submit"></button>
+      </form>
+      <ul class="list actions-user">
+        <li class="actions-user__item"><a href="#" class="link actions-user__link actions-user__link--ves">
+            <span class="actions-user__link-text actions-user__link-text--ves"></span></a></li>
+        <li class="actions-user__item"><a href="#" class="link actions-user__link">
+            <span class="actions-user__link-text actions-user__link-text--heart"></span></a></li>
+        <li class="actions-user__item actions-user__item--cart js-cart-btn">
+          <a href="#" class="link actions-user__link actions-user__link--cart">
+            <span class="actions-user__link-text actions-user__link-text--cart"></span>Корзина</a>
+          <span class="actions-user__cart-counter">0</span>
+          <div class="cart">
+            <div class="cart__header">
+              <p class="cart__title-header">В вашей корзине</p>
+              <p class="cart__counter-header"><span>2</span> товара</p>
+            </div>
+            <ul class="list cart__list js-cart-list">
+              <!-- <li class="cart__item">
+                <img class="cart__img" src="img/cart-img.png" alt="Фото товара">
+                <div class="cart__descriptions">
+                  <h4 class="cart__title">Kugoo Kirin M4</h4>
+                  <div class="cart__inner">
+                    <p class="cart__price-good">29 900</p>
+                    <p class="cart__counter-good"><span>1</span>шт.</p>
+                  </div>
+                </div>
+                <button class="cart__button-delete-good"></button>
+              </li> -->
+            </ul>
+            <div class="cart__footer">
+              <div class="cart__sum-wrap">
+                <p class="cart__sum-text">Сумма:</p>
+                <p class="cart__sum-number js-cart-sum-number">59 800 <span>₽</span></p>
+              </div>
+              <button class="cart__button">Оформить заказ</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="header__bottom">
+      <nav class="nav">
+        <ul class="list nav-list">
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span class="nav-list__link-text">О
+                магазине</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text nav-list__link-text--value">Доставка и оплата</span><span
+                class="nav-list__value">Доступна рассрочка</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text">Тест-драйв</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text">Блог</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text">Контакты</span></a></li>
+          <li class="nav-list__item"><a href="#" class="link nav-list__link"><span
+                class="nav-list__link-text nav-list__link-text--value">Акции</span><span
+                class="nav-list__value">%</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-mobile">
+      <div class="header-mobile__open-apps">
+        <div class="container">
+          <div class="header-mobile__left">
+            <img src="img/open-app-pic.png" alt="Картинка">
+            <div class="header-mobile__app-rating">
+              <p class="header-mobile__open-apps-text">Открыть в приложении</p>
+              <div class="header-mobile__svgs">
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#star-yellow"></use>
+                </svg>
+                <span class="header-mobile__value">2k</span>
+              </div>
+            </div>
+          </div>
+          <button class="header-mobile__button">Открыть</button>
+        </div>
+      </div>
+      <div class="header-mobile__wrapper">
+        <a href="#" class="logo logo--header link">KUGOO</a>
+        <div class="header-mobile__inner">
+          <svg>
+            <use xlink:href="img/sprite.svg#tel-purple"></use>
+          </svg>
+          <button class="button-catalog button-catalog--mobile">
+            <div class="burger">
+              <span class="burger__line burger__line--top"></span>
+              <span class="burger__line burger__line--middle"></span>
+              <span class="burger__line burger__line--bottom"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="header-mobile__search">
+        <form action="#" class="search-form">
+          <input class="search-form__input" type="search" placeholder="Искать самокат KUGO">
+          <button class="search-form__button" type="submit"></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <main>
+      <section class="cooperation-hero">
+  <div class="container cooperation-hero__container">
+    <div class="cooperation-hero__content">
+      <h1 class="cooperation-hero__title">
+        Покупайте товары Kugoo
+        по оптовым ценам от официального дилера
+      </h1>
+      <p class="cooperation-hero__subtitle">Ваша прибыль — до 25% от закупочной стоимости 1 единицы товара</p>
+      <ul class="list cooperation-benefits-list">
+        <li class="cooperation-benefits-list__item">
+          <span>
+            <svg class="cooperation-benefits-list__svg">
+              <use xlink:href="img/sprite.svg#benefits-pic1"></use>
+            </svg>
+          </span>
+          <p class="cooperation-benefits-list__text">Отсутствие демпинга — контроль цен и МРЦ</p>
+        </li>
+        <li class="cooperation-benefits-list__item">
+          <span>
+            <svg class="cooperation-benefits-list__svg">
+              <use xlink:href="img/sprite.svg#benefits-pic2"></use>
+            </svg>
+          </span>
+          <p class="cooperation-benefits-list__text">Бесплатная доставка до любой ТК</p>
+        </li>
+        <li class="cooperation-benefits-list__item">
+          <span>
+            <svg class="cooperation-benefits-list__svg">
+              <use xlink:href="img/sprite.svg#benefits-pic3"></use>
+            </svg>
+          </span>
+          <p class="cooperation-benefits-list__text">Беспроблемный возврат и замена брака</p>
+        </li>
+        <li class="cooperation-benefits-list__item">
+          <span>
+            <svg class="cooperation-benefits-list__svg">
+              <use xlink:href="img/sprite.svg#benefits-pic4"></use>
+            </svg>
+          </span>
+          <p class="cooperation-benefits-list__text">Готовый медиаконтент
+            для вашего сайта и соцсетей</p>
+        </li>
+      </ul>
+    </div>
+    <div class="cooperation-hero__form">
+      <form class="form" action="#" class="form">
+        <h4 class="form__title">Получите прайс-лист
+          с оптовыми ценами</h4>
+          <p class="form__subtitle">а&nbsp;также рассчитаем вашу прибыль от&nbsp;продажи товаров Kugoo</p>
+          <input class="form__input" type="tel" placeholder="Введите телефон">
+          <button class="form__button" type="submit">Скачать прайс-лист</button>
+          <div class="custome-checkbox">
+            <label class="custome-checkbox__label">
+              <input class="custome-checkbox__input" type="checkbox" name="Согласие" value="Да">
+              <span class="custome-checkbox__span"></span>
+              Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и политикой конфиденциальности
+            </label>
+          </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__lists">
+        <ul class="list footer__list footer__list--margin">
+          <li class="footer__item footer__item--title"><a href="#" class="link footer__link footer__link--title">Каталог
+              товаров</a></li>
+          <li class="footer__item"><a href="#" class="link footer__link">Электросамокаты</a></li>
+          <li class="footer__item"><a href="#" class="link footer__link">Электроскутеры</a></li>
+          <li class="footer__item"><a href="#" class="link footer__link">Электровелосипеды</a></li>
+        </ul>
+        <div class="footer__list-wrapper">
+          <ul class="list footer__list footer__list--margin-min">
+            <li class="footer__item footer__item--title"><a href="#"
+                class="link footer__link footer__link--title">Покупателям</a></li>
+            <li class="footer__item"><a href="#" class="link footer__link">Сервисный центр</a></li>
+            <li class="footer__item"><a href="#" class="link footer__link">Доставка и оплата</a></li>
+            <li class="footer__item"><a href="#" class="link footer__link">Рассрочка</a></li>
+            <li class="footer__item"><a href="#" class="link footer__link">Тест-драйв</a></li>
+          </ul>
+          <ul class="list footer__list footer__list--self-bottom">
+            <li class="footer__item"><a href="#" class="link footer__link">Блог</a></li>
+            <li class="footer__item"><a href="#" class="link footer__link">Сотрудничество</a></li>
+            <li class="footer__item"><a href="#" class="link footer__link">Контакты</a></li>
+            <li class="footer__item"><a href="#" class="link footer__link">Акции</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__right">
+        <p class="footer__title">Контакты</p>
+        <ul class="list footer-adreses">
+          <li class="footer-adreses__item">
+            <p class="footer-adreses__descr">Call-центр</p>
+            <a class="link footer-adreses__tel footer-adreses__tel--bold" href="tel:+7(800)505-45-61"
+              class="link footer__tel">+7(800) 505-45-61</a>
+            <p class="footer-adreses__working">Пн-Вс 10:00 - 20:00</p>
+          </li>
+          <li class="footer-adreses__item">
+            <p class="footer-adreses__descr">Сервисный центр</p>
+            <a class="link footer-adreses__tel footer-adreses__tel--bold" href="tel:+7(499)350-76-92"
+              class="link footer__tel">+7(499) 350-76-92</a>
+            <p class="footer-adreses__working">Пн-Вс 10:00 - 20:00</p>
+          </li>
+          <li class="footer-adreses__item footer-adreses__item--position">
+            <p class="footer-adreses__descr">Магазин в Москве
+              ул. Ткацкая, 5 стр. 16</p>
+            <a class="link footer-adreses__tel" href="tel:+7(499)350-76-92" class="link footer__tel">+7(499)
+              350-76-92</a>
+          </li>
+          <li class="footer-adreses__item">
+            <p class="footer-adreses__descr">Магазин в Санкт-Петербурге ул. Фрунзе, 2</p>
+            <a class="link footer-adreses__tel" href="tel:+7(499)350-76-92" class="link footer__tel">+7(499)
+              350-76-92</a>
+          </li>
+          <li class="footer-adreses__item">
+            <p class="footer-adreses__descr">Магазин в Санкт-Петербурге ул. Фрунзе, 2</p>
+            <a class="link footer-adreses__tel" href="tel:+7(499)350-76-92" class="link footer__tel">+7(499)
+              350-76-92</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__social">
+      <a href="#" class="link logo logo--footer">KUGOO</a>
+      <ul class="list list-apps">
+        <li class="list-apps__item">
+          <a href="#" class="link list-apps__link">
+            <img src="img/google-play.png" alt="google play">
+          </a>
+        </li>
+        <li class="list-apps__item">
+          <a href="#" class="link list-apps__link">
+            <img src="img/app-store.png" alt="app store">
+          </a>
+        </li>
+      </ul>
+      <ul class="list list-social">
+        <li class="list-social__item">
+          <a href="#" class="link list-social__link">
+            <img src="img/yt-img.png" alt="yt">
+          </a>
+        </li>
+        <li class="list-social__item">
+          <a href="#" class="link list-social__link">
+            <img src="img/vk-img.png" alt="yt">
+          </a>
+        </li>
+        <li class="list-social__item">
+          <a href="#" class="link list-social__link">
+            <img src="img/telegram-img.png" alt="yt">
+          </a>
+        </li>
+        <li class="list-social__item">
+          <a href="#" class="link list-social__link">
+            <img src="img/instagram-img.png" alt="yt">
+          </a>
+        </li>
+      </ul>
+      <ul class="list list-social-mobile">
+        <li class="list-social-mobile__item">
+          <a href="#" class="link list-social-mobile__link">
+            <img src="img/google-play.png" alt="google play">
+          </a>
+        </li>
+        <li class="list-social-mobile__item">
+          <a href="#" class="link list-social-mobile__link">
+            <img src="img/app-store.png" alt="app store">
+          </a>
+        </li>
+        <li class="list-social-mobile__item">
+          <a href="#" class="link lilist-social-mobile__link">
+            <img src="img/yt-img.png" alt="yt">
+          </a>
+        </li>
+        <li class="list-social-mobile__item">
+          <a href="#" class="link lilist-social-mobile__link">
+            <img src="img/vk-img.png" alt="yt">
+          </a>
+        </li>
+        <li class="list-social-mobile__item">
+          <a href="#" class="link lilist-social-mobile__link">
+            <img src="img/telegram-img.png" alt="yt">
+          </a>
+        </li>
+        <li class="list-social-mobile__item">
+          <a href="#" class="link lilist-social-mobile__link">
+            <img src="img/instagram-img.png" alt="yt">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="privacy-policy">
+      <ul class="list privacy-policy__list">
+        <li class="privacy-policy__item">
+          <a href="#" class="link privacy-policy__link">Реквизиты</a>
+        </li>
+        <li class="privacy-policy__item">
+          <a href="#" class="link privacy-policy__link">Политика конфиденциальности</a>
+        </li>
+      </ul>
+      <div class="privacy-policy__wrapper">
+        <ul class="list privacy-policy__list privacy-policy__list--payment">
+          <li class="privacy-policy__item">
+            <a href="#" class="link">
+              <img src="img/pic1.png" alt="картинка"></a>
+          </li>
+          <li class="privacy-policy__item">
+            <a href="#" class="link">
+              <img src="img/pic2.png" alt="картинка"></a>
+          </li>
+          <li class="privacy-policy__item">
+            <a href="#" class="link">
+              <img src="img/pic3.png" alt="картинка"></a>
+          </li>
+          <li class="privacy-policy__item">
+            <a href="#" class="link">
+              <img src="img/pic4.jpg" alt="картинка"></a>
+          </li>
+          <li class="privacy-policy__item">
+            <a href="#" class="link">
+              <img src="img/pic5.png" alt="картинка"></a>
+          </li>
+          <li class="privacy-policy__item">
+            <a href="#" class="link">
+              <img src="img/pic6.png" alt="картинка"></a>
+          </li>
+          <li class="privacy-policy__item">
+            <a href="#" class="link">
+              <img src="img/pic7.png" alt="картинка"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="privacy-policy__chat">
+        <p class="privacy-policy__text">Olnline чат:</p>
+        <ul class="list social-list">
+          <li class="social-list__item">
+            <a href="#" class="link social-list__link">
+              <svg class="social-list__svg social-list__svg--call">
+                <use xlink:href="img/sprite.svg#call-grey"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="link social-list__link">
+              <svg class="social-list__svg social-list__svg--whatsapp">
+                <use xlink:href="img/sprite.svg#whatsapp-gray"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="link social-list__link">
+              <svg class="social-list__svg social-list__svg--telegram">
+                <use xlink:href="img/sprite.svg#telegtram-grey"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    <div class="modal-callback js-modal-callback">
+  <div class="modal-callback__wrapper">
+    <div class="modal-callback__left">
+      <h3 class="title-h3 modal-callback__title">Менеджер позвонит вам в течение 5 минут</h3>
+      <p class="modal-callback__subtitle">ответит на все вопросы и проконсультирует по продуктам Kugoo</p>
+      <form class="modal-callback__form" action="#">
+        <input class="modal-callback__input" type="tel" placeholder="Введите телефон">
+        <button class="modal-callback__button">Позвоните мне</button>
+        <div class="custome-checkbox">
+          <label class="custome-checkbox__label">
+            <input class="custome-checkbox__input" type="checkbox" name="Согласие" value="Да">
+            <span class="custome-checkbox__span"></span>
+            Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и политикой конфиденциальности
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="modal-callback__right">
+      <img class="modal-callback__img" src="img/manager-women.png" alt="Менеджер">
+    </div>
+    <div class="modal-callback__button-absolute">
+      <button class="button-close button-close--modal js-button-close">
+        <span class="button-close__line button-close__line--one"></span>
+        <span class="button-close__line button-close__line--two"></span>
+      </button>
+    </div>
+  </div>
+</div>
+  </div>
+
+</body>
+
+</html>
