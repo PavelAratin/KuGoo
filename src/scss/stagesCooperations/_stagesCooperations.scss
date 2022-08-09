@@ -1,0 +1,79 @@
+.stages-cooperations{
+  padding: 55px 0;
+  &__title{
+    max-width: 854px;
+    text-align: center;
+    margin: 0 auto 34px auto;
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+.dropship-stages{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  row-gap: 105px;
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 57px;
+      height: 9px;
+      background-image: url('../img/dropship-arrow.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      top: 56px;
+      right: -10px;
+    }
+    &--line4{
+      &::before{
+        top: 200px;
+        right: 41%;
+        transform: rotate(90deg);
+      }
+    }
+    &--line5{
+      &::before{
+        top: -50px;
+        right: 41%;
+        transform: rotate(270deg);
+      }
+    }
+    &--line6{
+      &::before{
+        left: -45px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__imgbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__imgbox{
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background-color: $colorLavanda;
+    margin-bottom: 15px;
+  }
+  &__img{
+    width: 50px;
+    height: 50px;
+  }
+  &__text{
+    font-weight: 500;
+    font-size: 16px;
+    color: $colorBlack;
+    max-width: 144px;
+    text-align: center;
+  }
+}
