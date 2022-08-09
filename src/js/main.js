@@ -2,13 +2,14 @@ import { joicesCustome } from "./joicesCustome";
 import { customeSwiper } from './customeSwipers';
 import { tabOffes } from './tabOffers';
 import { playVideo } from './playVideo';
-import {customeGallerey} from './customeGallerey';
-import {accordionFaq} from './accordionFaq';
-import {dropDownLestTel} from './dropDownLestTel';
-import{modals} from './modals';
-import{cart} from './cart';
-import {diagnosticAnimation} from './diagnosticAnimation';
-import {tabTitles} from './tabTitles';
+import { customeGallerey } from './customeGallerey';
+import { accordionFaq } from './accordionFaq';
+import { dropDownLestTel } from './dropDownLestTel';
+import { modals } from './modals';
+import { cart } from './cart';
+import { diagnosticAnimation } from './diagnosticAnimation';
+import { tabTitles } from './tabTitles';
+import { mapAnimate } from './mapAnimate';
 window.addEventListener('DOMContentLoaded', function () {
   joicesCustome();
   customeSwiper();
@@ -21,4 +22,5 @@ window.addEventListener('DOMContentLoaded', function () {
   cart();
   diagnosticAnimation();
   tabTitles();
+  mapAnimate();
 });

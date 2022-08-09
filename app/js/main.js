@@ -213,6 +213,7 @@ function customeSwiper() {
   var videoObserv = document.querySelector('.js-video-observ');
   var articlesSwiper = document.querySelector('.js-articles-swiper');
   var teamServiceSwiper = document.querySelector('.js-team-service-swiper');
+  var whithoutSwiper = document.querySelector('.js-whithout-swiper');
 
   if (heroSwiper) {
     new Swiper(heroSwiper, {
@@ -319,6 +320,19 @@ function customeSwiper() {
       }
     });
   }
+
+  if (whithoutSwiper) {
+    new Swiper(whithoutSwiper, {
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.js-whithout-button-next',
+        prevEl: '.js-whithout-button-prev'
+      }
+    });
+  }
 }
 
 /***/ }),
@@ -338,26 +352,29 @@ function diagnosticAnimation() {
   var diagnosticItem = document.querySelectorAll('.js-diagnostic-item');
   var videoPlayButton = document.querySelector('.js-video-play-diagnostic');
   var videoBox = document.querySelector('.js-video-diagnostic');
-  window.addEventListener('scroll', function () {
-    var scrollTop = window.scrollY;
-    var diagnosticCenter = diagnosticSection.offsetHeight / 2;
 
-    if (scrollTop >= diagnosticCenter) {
-      diagnosticItem.forEach(function (item) {
-        item.classList.remove('diagnostic__item--translate-left');
-        item.classList.remove('diagnostic__item--translate-right');
-      });
-      document.querySelector('.js-img-box').classList.remove('diagnostic__imgbox--opacity');
-    }
-  });
-  videoPlayButton.addEventListener('click', function () {
-    diagnosticItem.forEach(function (item) {
-      item.classList.add('diagnostic__item--translate-left');
-      item.classList.add('diagnostic__item--translate-right');
+  if (diagnosticItem.length) {
+    window.addEventListener('scroll', function () {
+      var scrollTop = window.scrollY;
+      var diagnosticCenter = diagnosticSection.offsetHeight / 2;
+
+      if (scrollTop >= diagnosticCenter) {
+        diagnosticItem.forEach(function (item) {
+          item.classList.remove('diagnostic__item--translate-left');
+          item.classList.remove('diagnostic__item--translate-right');
+        });
+        document.querySelector('.js-img-box').classList.remove('diagnostic__imgbox--opacity');
+      }
     });
-    document.querySelector('.js-img-box').classList.add('diagnostic__imgbox--opacity');
-    videoBox.insertAdjacentHTML("beforeend", '<iframe class="diagnostic__video" width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-  });
+    videoPlayButton.addEventListener('click', function () {
+      diagnosticItem.forEach(function (item) {
+        item.classList.add('diagnostic__item--translate-left');
+        item.classList.add('diagnostic__item--translate-right');
+      });
+      document.querySelector('.js-img-box').classList.add('diagnostic__imgbox--opacity');
+      videoBox.insertAdjacentHTML("beforeend", '<iframe class="diagnostic__video" width="100%" height="100%" src="https://www.youtube.com/embed/1GVGWJqAWlQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    });
+  }
 }
 ;
 
@@ -406,6 +423,43 @@ function joicesCustome() {
         containerOuter: 'choices search-form__select'
       }
     });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/mapAnimate.js":
+/*!******************************!*\
+  !*** ./src/js/mapAnimate.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "mapAnimate": () => (/* binding */ mapAnimate)
+/* harmony export */ });
+function mapAnimate() {
+  var mapDelivery = document.querySelector('.js-map-delivery');
+  var mapDeliveryPaths = document.querySelectorAll('.map-delivery__path');
+  var mapDeliveryDots = document.querySelectorAll('.js-map-delivery-dot');
+  window.addEventListener('scroll', function () {
+    var windowCenter = window.innerHeight / 2 + window.scrollY;
+
+    if (windowCenter >= mapDelivery.offsetTop) {
+      mapDeliveryDots.forEach(function (dot) {
+        dot.classList.add('active');
+      });
+      mapDeliveryPaths.forEach(function (path) {
+        path.classList.add('active');
+      });
+    } else {
+      mapDeliveryDots.forEach(function (dot) {
+        dot.classList.remove('active');
+      });
+      mapDeliveryPaths.forEach(function (path) {
+        path.classList.remove('active');
+      });
+    }
   });
 }
 
@@ -677,6 +731,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./cart */ "./src/js/cart.js");
 /* harmony import */ var _diagnosticAnimation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./diagnosticAnimation */ "./src/js/diagnosticAnimation.js");
 /* harmony import */ var _tabTitles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./tabTitles */ "./src/js/tabTitles.js");
+/* harmony import */ var _mapAnimate__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./mapAnimate */ "./src/js/mapAnimate.js");
+
 
 
 
@@ -700,6 +756,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_cart__WEBPACK_IMPORTED_MODULE_8__.cart)();
   (0,_diagnosticAnimation__WEBPACK_IMPORTED_MODULE_9__.diagnosticAnimation)();
   (0,_tabTitles__WEBPACK_IMPORTED_MODULE_10__.tabTitles)();
+  (0,_mapAnimate__WEBPACK_IMPORTED_MODULE_11__.mapAnimate)();
 });
 })();
 

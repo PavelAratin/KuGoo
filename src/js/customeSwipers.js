@@ -4,6 +4,7 @@ export function customeSwiper() {
   const videoObserv = document.querySelector('.js-video-observ');
   const articlesSwiper = document.querySelector('.js-articles-swiper');
   const teamServiceSwiper = document.querySelector('.js-team-service-swiper');
+  const whithoutSwiper = document.querySelector('.js-whithout-swiper');
   if (heroSwiper) {
     new Swiper(heroSwiper, {
       direction: 'horizontal',
@@ -102,6 +103,18 @@ export function customeSwiper() {
         1200:{
           slidesPerView: 'auto',
         }
+      }
+    });
+  }
+  if (whithoutSwiper) {
+    new Swiper(whithoutSwiper, {
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.js-whithout-button-next',
+        prevEl: '.js-whithout-button-prev',
       }
     });
   }
