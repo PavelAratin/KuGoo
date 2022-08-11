@@ -75,7 +75,20 @@
   .team-service .swiper{
     width: auto;
   }
-
+  .cooperation-hero__container{
+    display: block;   
+  }
+  .cooperation-hero__content{
+    margin-bottom: 30px;
+  }
+  .cooperation-hero{
+    .form{
+      width: 100%;
+    }
+  }
+  .cooperation-benefits-list{
+    width: 100%;
+  }
 }
 @media screen and(max-width: 1100px){
   .official-dealer .testdrive{
@@ -225,6 +238,40 @@
   .setting{
     display: none;
   }
+  .whithout__wrapper{
+    display: block;
+  }
+  .whithout__head{
+    display: block;
+    margin-bottom: 30px;  
+  }
+  .whithout__head-wrap{
+    margin-bottom: 30px;
+  }
+  .whithout__left{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .whithout__right{
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .map-delivery__svg{
+    height: 500px;
+  }
+  .dropship-stages__item::before{
+    right: -30px;
+  }
+  .dropship-stages__item--line5::before{
+    right: 41%;
+  }
+  .dropship-stages__item--line4::before{
+    right: 38%;
+  }
+  .dropship-stages__item--line6::before{
+    left: -25px;
+  }
 }
 @media screen and(max-width: 900px){
   .actions-user{
@@ -272,7 +319,9 @@
   .diagnostic,
   .repair-cost,
   .determin,
-  .official-magazine{
+  .official-magazine,
+  .whithout,
+  .delivery-map{
     padding: 20px 0;
   }
   .reviews{
@@ -505,5 +554,98 @@
   .official-magazine__img--big,
   .official-magazine__img--small{
     grid-column: auto;
+  }
+  .cooperation-hero__title{
+    font-size: 25px;
+  }
+  .whithout .swiper-button-prev,
+  .whithout .swiper-button-next{
+    width: 45px;
+    height: 45px;
+  }
+  .map-delivery__svg{
+    height: 200px;
+    padding: 0 20px;
+  }
+  .dropship-stages{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+  .dropship-stages__imgbox{
+    width: 55px;
+    height: 55px;
+    img{
+      width: 25px;
+    }
+  }
+  .dropship-stages__item::before{
+    width: 31px;
+  }
+  .dropship-stages__item--mobil3{
+    grid-column: 2;
+  }
+  .dropship-stages__item--mobil4{
+    grid-column: 2;
+  }
+  .dropship-stages__item--mobil5{
+    grid-column: 2;
+    grid-row: 4;
+  }
+  .dropship-stages__item--mobil6{
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .dropship-stages__item--mobil7{
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .dropship-stages__item--mobil8{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .dropship-stages__item--before1::before{
+    right: -18px;
+    top: 25px;
+  }
+  .dropship-stages__item--before2::before{
+    right: 50%;
+    top: 109px;
+    transform: rotate(90deg) translateY(-175%);
+  }
+  .dropship-stages__item--before3::before{
+    right: 50%;
+    top: 120px;
+    transform: rotate(90deg) translateY(-175%);
+  }
+  .dropship-stages__item--before4::before{
+    right: 50%;
+    top: 111px;
+    transform: rotate(90deg) translateY(-175%);
+  }
+  .dropship-stages__item--before5::before{
+    left: -17px;
+    top: 24px;
+  }
+  .dropship-stages__item--before6::before,
+  .dropship-stages__item--before7::before{
+    top: -30px;
+    left: 50%;
+    transform: rotate(270deg) translateY(-158%);
+  }
+  .dropship-stages__item--before8::before{
+    top: -31px;
+    transform: rotate(270deg) translateY(-148%);
+    left: 50%;
+  }
+  .development-plan__wrapper{
+    display: block;
+  }
+  .development-plan{
+    .form{
+      width: 100%;
+    }
+  }
+  .development-plan__left{
+    margin-bottom: 30px;
   }
 }

@@ -1,0 +1,49 @@
+.development-plan{
+  padding: 65px 0;
+  background: radial-gradient(71.16% 199.4% at 82.43% 76.38%, #8185FF 0%, #6F73EE 100%);
+  border-radius: 10px;
+  width: calc(100% - 35px);
+  margin: 65px auto 65px auto;
+  &__wrapper{
+    display: flex;
+  }
+  &__left{
+    margin-right: 30px;
+  }
+  &__shield{
+    display: inline-block;
+    padding: 8px;
+    color: $colorWhite;
+    font-size: 14px;
+    background-color: $colorGreenYellow;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  &__title{
+    color: $colorWhite;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+  }
+  &__list-title{
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorWhite;
+    margin-bottom: 13px;
+  }
+  &__form{
+    border: 1px solid $colorWhite;
+  }
+}
+.development-plan-list{
+  color: $colorWhite;
+  &__item:not(:last-child){
+    margin-bottom: 18px;
+  }
+  &__text{
+    padding-left: 27px;
+    background-image: url('../img/list-check-white.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+  }
+}
