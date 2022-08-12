@@ -28,6 +28,8 @@
   &__img{
     display: block;
     width: 100%;
+    height: 306px;
+    object-fit: contain;
   }
   &__shield{
     font-weight: 500;

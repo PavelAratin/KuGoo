@@ -183,6 +183,7 @@
   cursor: pointer;
   outline: none;
   transition: background 0.2s linear;
+  position: relative;
   &--header{
     margin-right: 20px;
   }
@@ -195,6 +196,9 @@
   &:hover,
   &:focus{
     background-color: $colorBlueHover;
+  }
+  &:hover .header-drop-menu{
+    display: flex;
   }
 }
 .burger{
@@ -485,5 +489,77 @@
   }
   &.active{
     transform: translateY(15%);
+  }
+}
+
+.header-drop-menu{
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: $colorWhite;
+  z-index: 3;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 0px 10px 30px rgb(111 115 238 / 50%);
+  display: none;
+  &__list--midle{
+    align-self: center;
+    margin-right: 61px;
+  }
+  &__list--right{
+    padding-top: 21px;
+    white-space: nowrap;
+    padding-right: 20px;
+  }
+  &__item:first-child{
+    margin-bottom: 15px;
+  }
+  &__item:not(:last-child){
+    margin-bottom: 10px;
+  }
+  &__link{
+    font-size: 14px;
+    color: $colorGrey600;
+    transition: color 0.2s linear;
+    &:hover{
+      color: $colorPurple;
+    }
+    &--head{
+      font-weight: 500;
+      font-size: 16px;
+      color: $colorBlack;
+      pointer-events: none;
+    }
+  }
+}
+.header-drop-pages-list{
+  background-color: $colorLavanda;
+  border-radius: 5px;
+  padding: 20px;
+  margin-right: 43px;
+  &__item:not(:last-child){
+    margin-bottom: 15px;
+  }
+  &__link{
+    font-weight: 500;
+    font-size: 16px;
+    color: $colorBlack;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s linear;
+    &:hover{
+      color: $colorPurple ;
+    }
+    &:hover svg{
+      fill: $colorPurple;
+    }
+  }
+  &__svg{
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+    fill: $colorGrey600;
+    transition: fill 0.2s linear;
   }
 }

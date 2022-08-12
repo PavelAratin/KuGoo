@@ -363,6 +363,7 @@ input[type=search]::-webkit-search-results-decoration {
   cursor: pointer;
   outline: none;
   transition: background 0.2s linear;
+  position: relative;
 }
 .button-catalog--header {
   margin-right: 20px;
@@ -375,6 +376,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .button-catalog:hover, .button-catalog:focus {
   background-color: #8185F9;
+}
+.button-catalog:hover .header-drop-menu {
+  display: flex;
 }
 
 .burger {
@@ -667,6 +671,79 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .dropdown-list-tel.active {
   transform: translateY(15%);
+}
+
+.header-drop-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #ffffff;
+  z-index: 3;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 0px 10px 30px rgba(111, 115, 238, 0.5);
+  display: none;
+}
+.header-drop-menu__list--midle {
+  align-self: center;
+  margin-right: 61px;
+}
+.header-drop-menu__list--right {
+  padding-top: 21px;
+  white-space: nowrap;
+  padding-right: 20px;
+}
+.header-drop-menu__item:first-child {
+  margin-bottom: 15px;
+}
+.header-drop-menu__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.header-drop-menu__link {
+  font-size: 14px;
+  color: #5d667b;
+  transition: color 0.2s linear;
+}
+.header-drop-menu__link:hover {
+  color: #6F73EE;
+}
+.header-drop-menu__link--head {
+  font-weight: 500;
+  font-size: 16px;
+  color: #282739;
+  pointer-events: none;
+}
+
+.header-drop-pages-list {
+  background-color: #F4F7FB;
+  border-radius: 5px;
+  padding: 20px;
+  margin-right: 43px;
+}
+.header-drop-pages-list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.header-drop-pages-list__link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #282739;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s linear;
+}
+.header-drop-pages-list__link:hover {
+  color: #6F73EE;
+}
+.header-drop-pages-list__link:hover svg {
+  fill: #6F73EE;
+}
+.header-drop-pages-list__svg {
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  fill: #5d667b;
+  transition: fill 0.2s linear;
 }
 
 .header-mobile {
@@ -1113,6 +1190,9 @@ input[type=search]::-webkit-search-results-decoration {
 .product-cards__img {
   display: block;
   width: 100%;
+  height: 306px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .product-cards__shield {
   font-weight: 500;
@@ -2670,6 +2750,8 @@ input[type=search]::-webkit-search-results-decoration {
   height: 50px;
   border-radius: 100%;
   overflow: hidden;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .cart__title {
   font-weight: 500;

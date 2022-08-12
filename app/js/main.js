@@ -404,6 +404,55 @@ function dropDownLestTel() {
 
 /***/ }),
 
+/***/ "./src/js/getProduct.js":
+/*!******************************!*\
+  !*** ./src/js/getProduct.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getProduct": () => (/* binding */ getProduct)
+/* harmony export */ });
+/* harmony import */ var _customeSwipers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./customeSwipers */ "./src/js/customeSwipers.js");
+/* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cart */ "./src/js/cart.js");
+
+
+function getProduct() {
+  var productCardWrapper = document.querySelector('.js-product-cards');
+
+  var createTemplate = function createTemplate(data) {
+    return "\n  <div class=\"product-cards__card\">\n  <div class=\"product-cards__imgbox\">\n    <div class=\"swiper js-product-card-swiper-minpic\">\n      <div class=\"swiper-wrapper js-swiper-wrapper\">\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"".concat(data.img[0], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"").concat(data.img[1], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"").concat(data.img[2], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n      </div>\n      <button class=\"swiper-button-prev js-min-pic-swiper-swiper-button-prev\"></button>\n      <button class=\"swiper-button-next js-min-pic-swiper-swiper-button-next\"></button>\n    </div>\n    <span class=\"product-cards__shield product-cards__shield--red\">\u0425\u0418\u0422</span>\n    <span class=\"product-cards__svg-box\"></span>\n  </div>\n  <div class=\"product-cards__body\">\n    <h3 class=\"product-cards__title\">").concat(data.title, "</h3>\n    <div class=\"product-cards__info\">\n      <p class=\"product-cards__info-text product-cards__info-text--accum\">").concat(data.charge, "</p>\n      <p class=\"product-cards__info-text product-cards__info-text--power\">").concat(data.horsepower, " \u043B.\u0441</p>\n      <p class=\"product-cards__info-text product-cards__info-text--kmch\">").concat(data.speed, " \u043A\u043C/\u0447</p>\n      <p class=\"product-cards__info-text product-cards__info-text--timer\">").concat(data.chargeTime, " \u0447\u0430\u0441\u043E\u0432</p>\n    </div>\n    <div class=\"product-cards__actions\">\n      <div class=\"product-cards__inner\">\n        <span class=\"product-cards__price-actual\">").concat(data.actualPrice, " \u20BD</span>\n        <span class=\"product-cards__price-sale\">").concat(data.priceSale, " \u20BD</span>\n      </div>        \n        <div class=\"product-cards__buttons\">\n          <button class=\"product-cards__btn product-cards__btn--incart js-product-add-to-cart\"></button>\n          <button class=\"product-cards__btn product-cards__btn--like\"></button>\n        </div>\n    </div>\n    <button class=\"product-cards__button\">\u041A\u0443\u043F\u0438\u0442\u044C \u0432 1 \u043A\u043B\u0438\u043A</button>\n  </div>\n</div>\n  ");
+  }; // const creatTemplateSlide = (slideImg) => {
+  //     return  `
+  //     <div class="swiper-slide">
+  //       <a class="product-cards__link-overlay" href="#">
+  //         <img class="product-cards__img" src="img/img-swiper-card.png" alt="Самокат">
+  //       </a>
+  //     </div>
+  //     `
+  // }
+
+
+  fetch('./db.json').then(function (response) {
+    return response.json();
+  }).then(function (body) {
+    var slideWrapper = document.querySelector('.js-swiper-wrapper');
+
+    if (body) {
+      body.forEach(function (item) {
+        productCardWrapper.innerHTML += createTemplate(item);
+        (0,_customeSwipers__WEBPACK_IMPORTED_MODULE_0__.customeSwiper)();
+        (0,_cart__WEBPACK_IMPORTED_MODULE_1__.cart)();
+      });
+    }
+  })["catch"](function (error) {
+    console.log(error);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/joicesCustome.js":
 /*!*********************************!*\
   !*** ./src/js/joicesCustome.js ***!
@@ -732,6 +781,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _diagnosticAnimation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./diagnosticAnimation */ "./src/js/diagnosticAnimation.js");
 /* harmony import */ var _tabTitles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./tabTitles */ "./src/js/tabTitles.js");
 /* harmony import */ var _mapAnimate__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./mapAnimate */ "./src/js/mapAnimate.js");
+/* harmony import */ var _getProduct__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./getProduct */ "./src/js/getProduct.js");
+
 
 
 
@@ -757,6 +808,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_diagnosticAnimation__WEBPACK_IMPORTED_MODULE_9__.diagnosticAnimation)();
   (0,_tabTitles__WEBPACK_IMPORTED_MODULE_10__.tabTitles)();
   (0,_mapAnimate__WEBPACK_IMPORTED_MODULE_11__.mapAnimate)();
+  (0,_getProduct__WEBPACK_IMPORTED_MODULE_12__.getProduct)();
 });
 })();
 

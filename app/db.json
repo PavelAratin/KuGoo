@@ -1,0 +1,104 @@
+[
+  {
+    "title": "KugooKirin M4",
+    "charge": "2000 mAh",
+    "horsepower": 1.2,
+    "speed": 60,
+    "chargeTime": 5,
+    "actualPrice": 39000,
+    "priceSale": 29000,
+    "img": ["/img/kugoo-m4-1.jpg","/img/kugoo-m4-2.jpg","/img/kugoo-m4-3.jpg"]
+  },
+  {
+    "title": "KugooKirin M4 Pro",
+    "charge": "2000 mAh",
+    "horsepower": 2,
+    "speed": 45,
+    "chargeTime": 5,
+    "actualPrice": 54000,
+    "priceSale": 50000,
+    "img": ["/img/kugoo-m4-pro-18-ah-1.jpg","/img/kugoo-m4-pro-18-ah-2.jpg","/img/kugoo-m4-pro-18-ah-3.jpg"]
+  },
+  {
+    "title": "Kugoo Kirin First",
+    "charge": "2500 mAh",
+    "horsepower": 1.5,
+    "speed": 15,
+    "chargeTime": 10,
+    "actualPrice": 18500,
+    "priceSale": 28000,
+    "img": ["/img/kugoo-kirin-first-1.jpg"]
+    
+  },
+  {
+    "title": "Kugoo S3",
+    "charge": "6600 mAh",
+    "horsepower": 1.5,
+    "speed": 30,
+    "chargeTime": 5,
+    "actualPrice": 23000,
+    "priceSale": 29900,
+    "img": ["/img/kugoo-s3-black-1.jpg","/img/kugoo-s3-black-2.jpg","/img/kugoo-s3-black-3.jpg"]
+  },
+  {
+    "title": "Kugoo Kirin M2",
+    "charge": "8000 mAh",
+    "horsepower": 1.9,
+    "speed": 35,
+    "chargeTime": 5,
+    "actualPrice": 29000,
+    "priceSale": 39000,
+    "img": ["/img/kugoo-m2-1.jpg","/img/kugoo-m2-2.jpg","/img/kugoo-m2-3.jpg"]
+  },
+  {
+    "title": "Kugoo Kirin M2 Pro",
+    "charge": "9000 mAh",
+    "horsepower": 1.4,
+    "speed": 30,
+    "chargeTime": 10,
+    "actualPrice": 29900,
+    "priceSale": 45900,
+    "img": ["/img/Kugoo-m2-pro-1.jpg","/img/Kugoo-m2-pro-2.jpg","/img/Kugoo-m2-pro-3.jpg"]
+  },
+  {
+    "title": "Kugoo HX Pro",
+    "charge": "12800 mAh",
+    "horsepower": 3,
+    "speed": 30,
+    "chargeTime": 15,
+    "actualPrice": 35500,
+    "priceSale": 54000,
+    "img": ["/img/kugoo-hx-pro-1.jpg","/img/kugoo-hx-pro-2.jpg","/img/kugoo-hx-pro-3.jpg"]
+  },
+  {
+    "title": "Kugo G-Max",
+    "charge": "10000 mAh",
+    "horsepower": 4,
+    "speed": 35,
+    "chargeTime": 5,
+    "actualPrice": 38900,
+    "priceSale": 59900,
+    "img": ["/img/Kugoo-g-max-1.jpg","/img/Kugoo-g-max-2.jpg","/img/Kugoo-g-max-3.jpg"]
+    
+  },
+  {
+    "title": "Kugoo V1",
+    "charge": "11000 mAh",
+    "horsepower": 2,
+    "speed": 40,
+    "chargeTime": 5,
+    "actualPrice": 39000,
+    "priceSale": 49900,
+    "img": ["/img/Kugoo-v1-1.jpg","/img/Kugoo-v1-2.jpg","/img/Kugoo-v1-3.jpg"]
+  },
+  {
+    "title": "Kugoo C1",
+    "charge": "7500 mAh",
+    "horsepower": 1.6,
+    "speed": 40,
+    "chargeTime": 5,
+    "actualPrice": 40900,
+    "priceSale": 52900,
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+  }
+]

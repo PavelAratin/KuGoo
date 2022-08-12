@@ -43,6 +43,7 @@
     height: 50px;
     border-radius: 100%;
     overflow: hidden;
+    object-fit: contain;
   }
   &__title{
     font-weight: 500;

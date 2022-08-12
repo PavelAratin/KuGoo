@@ -10,6 +10,7 @@ import { cart } from './cart';
 import { diagnosticAnimation } from './diagnosticAnimation';
 import { tabTitles } from './tabTitles';
 import { mapAnimate } from './mapAnimate';
+import {getProduct} from './getProduct';
 window.addEventListener('DOMContentLoaded', function () {
   joicesCustome();
   customeSwiper();
@@ -23,4 +24,5 @@ window.addEventListener('DOMContentLoaded', function () {
   diagnosticAnimation();
   tabTitles();
   mapAnimate();
+  getProduct();
 });
