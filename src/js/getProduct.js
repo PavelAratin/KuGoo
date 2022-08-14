@@ -1,7 +1,8 @@
 import { customeSwiper } from './customeSwipers';
-import {cart} from './cart';
+import { cart } from './cart';
 export function getProduct() {
   const productCardWrapper = document.querySelector('.js-product-cards');
+  const buttonProductWievAll = document.querySelector('.js-product-set-viewall');
 
   const createTemplate = data => {
     return `
@@ -16,12 +17,12 @@ export function getProduct() {
         </div>
         <div class="swiper-slide">
           <a class="product-cards__link-overlay" href="#">
-            <img class="product-cards__img" src="${data.img[1]}" alt="Самокат">
+            <img class="product-cards__img" src="${data.img[1] ? data.img[1] : data.img[0]}" alt="Самокат">
           </a>
         </div>
         <div class="swiper-slide">
           <a class="product-cards__link-overlay" href="#">
-            <img class="product-cards__img" src="${data.img[2]}" alt="Самокат">
+            <img class="product-cards__img" src="${data.img[2] ? data.img[2] : data.img[0]}" alt="Самокат">
           </a>
         </div>
       </div>
@@ -53,31 +54,48 @@ export function getProduct() {
   </div>
 </div>
   `
-}
-
-// const creatTemplateSlide = (slideImg) => {
-//     return  `
-//     <div class="swiper-slide">
-//       <a class="product-cards__link-overlay" href="#">
-//         <img class="product-cards__img" src="img/img-swiper-card.png" alt="Самокат">
-//       </a>
-//     </div>
-//     `
-// }
+  }
+  // const creatTemplateSlide = (slideImg) => {
+  //   return `
+  //     <div class="swiper-slide">
+  //       <a class="product-cards__link-overlay" href="#">
+  //         <img class="product-cards__img" src="img/img-swiper-card.png" alt="Самокат">
+  //       </a>
+  //     </div>
+  //     `
+  // }
 
   fetch('./db.json')
     .then(response => response.json())
     .then(body => {
-      const slideWrapper = document.querySelector('.js-swiper-wrapper')
       if (body) {
-        body.forEach(function (item) {
-          productCardWrapper.innerHTML += createTemplate(item)
+        for (let i = 0; i < 6; i++) {
+          productCardWrapper.innerHTML += createTemplate(body[i])
           customeSwiper();
           cart();
-        })
+        }
       }
     })
     .catch(error => {
       console.log(error)
     })
+
+  buttonProductWievAll.addEventListener('click', function () {
+    let visibleEl = productCardWrapper.children.length;
+    let counterEl = visibleEl + 3;
+    fetch('./db.json')
+      .then((response) => response.json())
+      .then((body) => {
+        if (body) {
+          for (let i = visibleEl; i < counterEl; i++) {
+            productCardWrapper.innerHTML += createTemplate(body[i])
+            customeSwiper();
+            cart();
+          }
+          if ((counterEl + 1) === body.length){
+            this.style.display = 'none';
+          }
+        }
+      })
+  });
 }
