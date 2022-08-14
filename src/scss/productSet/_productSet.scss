@@ -28,7 +28,7 @@
       background-color: $colorPurple;
       color: $colorWhite;
     }
-    &:focus{
+    &:focus:not(:hover){
       border-color: $colorPurple;
       color: $colorPurple;
     }

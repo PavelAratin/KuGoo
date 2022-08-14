@@ -7,7 +7,11 @@
     "chargeTime": 5,
     "actualPrice": 39000,
     "priceSale": 29000,
-    "img": ["/img/kugoo-m4-1.jpg","/img/kugoo-m4-2.jpg","/img/kugoo-m4-3.jpg"]
+    "img": ["/img/kugoo-m4-1.jpg","/img/kugoo-m4-2.jpg","/img/kugoo-m4-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":false,
+    "forChildren": true
   },
   {
     "title": "KugooKirin M4 Pro",
@@ -17,7 +21,11 @@
     "chargeTime": 5,
     "actualPrice": 54000,
     "priceSale": 50000,
-    "img": ["/img/kugoo-m4-pro-18-ah-1.jpg","/img/kugoo-m4-pro-18-ah-2.jpg","/img/kugoo-m4-pro-18-ah-3.jpg"]
+    "img": ["/img/kugoo-m4-pro-18-ah-1.jpg","/img/kugoo-m4-pro-18-ah-2.jpg","/img/kugoo-m4-pro-18-ah-3.jpg"],
+    "productShieldHit": false,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo Kirin First",
@@ -27,8 +35,11 @@
     "chargeTime": 10,
     "actualPrice": 18500,
     "priceSale": 28000,
-    "img": ["/img/kugoo-kirin-first-1.jpg"]
-    
+    "img": ["/img/kugoo-kirin-first-1.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":false,
+    "forChildren": true
   },
   {
     "title": "Kugoo S3",
@@ -38,7 +49,11 @@
     "chargeTime": 5,
     "actualPrice": 23000,
     "priceSale": 29900,
-    "img": ["/img/kugoo-s3-black-1.jpg","/img/kugoo-s3-black-2.jpg","/img/kugoo-s3-black-3.jpg"]
+    "img": ["/img/kugoo-s3-black-1.jpg","/img/kugoo-s3-black-2.jpg","/img/kugoo-s3-black-3.jpg"],
+    "productShieldHit": false,
+    "forTown": true,
+    "forAdults":false,
+    "forChildren": true
   },
   {
     "title": "Kugoo Kirin M2",
@@ -48,7 +63,11 @@
     "chargeTime": 5,
     "actualPrice": 29000,
     "priceSale": 39000,
-    "img": ["/img/kugoo-m2-1.jpg","/img/kugoo-m2-2.jpg","/img/kugoo-m2-3.jpg"]
+    "img": ["/img/kugoo-m2-1.jpg","/img/kugoo-m2-2.jpg","/img/kugoo-m2-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo Kirin M2 Pro",
@@ -58,7 +77,11 @@
     "chargeTime": 10,
     "actualPrice": 29900,
     "priceSale": 45900,
-    "img": ["/img/Kugoo-m2-pro-1.jpg","/img/Kugoo-m2-pro-2.jpg","/img/Kugoo-m2-pro-3.jpg"]
+    "img": ["/img/Kugoo-m2-pro-1.jpg","/img/Kugoo-m2-pro-2.jpg","/img/Kugoo-m2-pro-3.jpg"],
+    "productShieldHit": false,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo HX Pro",
@@ -68,7 +91,11 @@
     "chargeTime": 15,
     "actualPrice": 35500,
     "priceSale": 54000,
-    "img": ["/img/kugoo-hx-pro-1.jpg","/img/kugoo-hx-pro-2.jpg","/img/kugoo-hx-pro-3.jpg"]
+    "img": ["/img/kugoo-hx-pro-1.jpg","/img/kugoo-hx-pro-2.jpg","/img/kugoo-hx-pro-3.jpg"],
+    "productShieldHit": false,
+    "forTown": true,
+    "forAdults":false,
+    "forChildren": true
   },
   {
     "title": "Kugo G-Max",
@@ -78,8 +105,11 @@
     "chargeTime": 5,
     "actualPrice": 38900,
     "priceSale": 59900,
-    "img": ["/img/Kugoo-g-max-1.jpg","/img/Kugoo-g-max-2.jpg","/img/Kugoo-g-max-3.jpg"]
-    
+    "img": ["/img/Kugoo-g-max-1.jpg","/img/Kugoo-g-max-2.jpg","/img/Kugoo-g-max-3.jpg"],
+    "productShieldHit": false,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo V1",
@@ -89,7 +119,11 @@
     "chargeTime": 5,
     "actualPrice": 39000,
     "priceSale": 49900,
-    "img": ["/img/Kugoo-v1-1.jpg","/img/Kugoo-v1-2.jpg","/img/Kugoo-v1-3.jpg"]
+    "img": ["/img/Kugoo-v1-1.jpg","/img/Kugoo-v1-2.jpg","/img/Kugoo-v1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -99,7 +133,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -109,7 +147,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -119,7 +161,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -129,7 +175,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -139,7 +189,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -149,7 +203,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -159,7 +217,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -169,7 +231,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -179,7 +245,11 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   },
   {
     "title": "Kugoo C1",
@@ -189,6 +259,10 @@
     "chargeTime": 5,
     "actualPrice": 40900,
     "priceSale": 52900,
-    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"]
+    "img": ["/img/kugoo-c1-1.jpg","/img/kugoo-c1-2.jpg","/img/kugoo-c1-3.jpg"],
+    "productShieldHit": true,
+    "forTown": true,
+    "forAdults":true,
+    "forChildren": false
   }
 ]

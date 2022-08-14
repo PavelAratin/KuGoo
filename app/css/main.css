@@ -91,6 +91,10 @@ input[type=search]::-webkit-search-results-decoration {
   overflow: hidden;
 }
 
+.hide {
+  display: none;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url(../fonts/Roboto-Light.woff2), url(../fonts/Roboto-Light.woff);
@@ -1137,7 +1141,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #6F73EE;
   color: #ffffff;
 }
-.product-set__button:focus {
+.product-set__button:focus:not(:hover) {
   border-color: #6F73EE;
   color: #6F73EE;
 }

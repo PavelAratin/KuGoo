@@ -3,10 +3,30 @@ import { cart } from './cart';
 export function getProduct() {
   const productCardWrapper = document.querySelector('.js-product-cards');
   const buttonProductWievAll = document.querySelector('.js-product-set-viewall');
+  const productSetButtons = document.querySelectorAll('.js-product-set-button');
+
+  productSetButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const currentBtn = btn.dataset.filter;
+      filter(currentBtn)
+    });
+  });
+
+  function filter(category) {
+    const productCards = document.querySelectorAll('.js-product-card')
+    productCards.forEach(function(card){
+      const itemFiltered = !card.classList.contains(category);
+      if(itemFiltered){
+        card.classList.add('hide')
+      }else{
+        card.classList.remove('hide')
+      }
+    });
+  }
 
   const createTemplate = data => {
     return `
-  <div class="product-cards__card">
+  <div class="product-cards__card js-product-card ${data.productShieldHit ? "hit" : ''} ${data.forTown ? "forTown" : ''} ${data.forAdults ? "forAdults" : ''} ${data.forChildren ? "forChildren" : ''}">
   <div class="product-cards__imgbox">
     <div class="swiper js-product-card-swiper-minpic">
       <div class="swiper-wrapper js-swiper-wrapper">
@@ -29,7 +49,7 @@ export function getProduct() {
       <button class="swiper-button-prev js-min-pic-swiper-swiper-button-prev"></button>
       <button class="swiper-button-next js-min-pic-swiper-swiper-button-next"></button>
     </div>
-    <span class="product-cards__shield product-cards__shield--red">ХИТ</span>
+    ${data.productShieldHit ? '<span class="product-cards__shield product-cards__shield--red">ХИТ</span>' : ''}
     <span class="product-cards__svg-box"></span>
   </div>
   <div class="product-cards__body">
@@ -55,15 +75,6 @@ export function getProduct() {
 </div>
   `
   }
-  // const creatTemplateSlide = (slideImg) => {
-  //   return `
-  //     <div class="swiper-slide">
-  //       <a class="product-cards__link-overlay" href="#">
-  //         <img class="product-cards__img" src="img/img-swiper-card.png" alt="Самокат">
-  //       </a>
-  //     </div>
-  //     `
-  // }
 
   fetch('./db.json')
     .then(response => response.json())
@@ -92,7 +103,7 @@ export function getProduct() {
             customeSwiper();
             cart();
           }
-          if ((counterEl + 1) === body.length){
+          if ((counterEl + 1) === body.length) {
             this.style.display = 'none';
           }
         }

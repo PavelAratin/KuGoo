@@ -421,19 +421,30 @@ __webpack_require__.r(__webpack_exports__);
 function getProduct() {
   var productCardWrapper = document.querySelector('.js-product-cards');
   var buttonProductWievAll = document.querySelector('.js-product-set-viewall');
+  var productSetButtons = document.querySelectorAll('.js-product-set-button');
+  productSetButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var currentBtn = btn.dataset.filter;
+      filter(currentBtn);
+    });
+  });
+
+  function filter(category) {
+    var productCards = document.querySelectorAll('.js-product-card');
+    productCards.forEach(function (card) {
+      var itemFiltered = !card.classList.contains(category);
+
+      if (itemFiltered) {
+        card.classList.add('hide');
+      } else {
+        card.classList.remove('hide');
+      }
+    });
+  }
 
   var createTemplate = function createTemplate(data) {
-    return "\n  <div class=\"product-cards__card\">\n  <div class=\"product-cards__imgbox\">\n    <div class=\"swiper js-product-card-swiper-minpic\">\n      <div class=\"swiper-wrapper js-swiper-wrapper\">\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"".concat(data.img[0], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"").concat(data.img[1] ? data.img[1] : data.img[0], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"").concat(data.img[2] ? data.img[2] : data.img[0], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n      </div>\n      <button class=\"swiper-button-prev js-min-pic-swiper-swiper-button-prev\"></button>\n      <button class=\"swiper-button-next js-min-pic-swiper-swiper-button-next\"></button>\n    </div>\n    <span class=\"product-cards__shield product-cards__shield--red\">\u0425\u0418\u0422</span>\n    <span class=\"product-cards__svg-box\"></span>\n  </div>\n  <div class=\"product-cards__body\">\n    <h3 class=\"product-cards__title\">").concat(data.title, "</h3>\n    <div class=\"product-cards__info\">\n      <p class=\"product-cards__info-text product-cards__info-text--accum\">").concat(data.charge, "</p>\n      <p class=\"product-cards__info-text product-cards__info-text--power\">").concat(data.horsepower, " \u043B.\u0441</p>\n      <p class=\"product-cards__info-text product-cards__info-text--kmch\">").concat(data.speed, " \u043A\u043C/\u0447</p>\n      <p class=\"product-cards__info-text product-cards__info-text--timer\">").concat(data.chargeTime, " \u0447\u0430\u0441\u043E\u0432</p>\n    </div>\n    <div class=\"product-cards__actions\">\n      <div class=\"product-cards__inner\">\n        <span class=\"product-cards__price-actual\">").concat(data.actualPrice, " \u20BD</span>\n        <span class=\"product-cards__price-sale\">").concat(data.priceSale, " \u20BD</span>\n      </div>        \n        <div class=\"product-cards__buttons\">\n          <button class=\"product-cards__btn product-cards__btn--incart js-product-add-to-cart\"></button>\n          <button class=\"product-cards__btn product-cards__btn--like\"></button>\n        </div>\n    </div>\n    <button class=\"product-cards__button\">\u041A\u0443\u043F\u0438\u0442\u044C \u0432 1 \u043A\u043B\u0438\u043A</button>\n  </div>\n</div>\n  ");
-  }; // const creatTemplateSlide = (slideImg) => {
-  //   return `
-  //     <div class="swiper-slide">
-  //       <a class="product-cards__link-overlay" href="#">
-  //         <img class="product-cards__img" src="img/img-swiper-card.png" alt="Самокат">
-  //       </a>
-  //     </div>
-  //     `
-  // }
-
+    return "\n  <div class=\"product-cards__card js-product-card ".concat(data.productShieldHit ? "hit" : '', " ").concat(data.forTown ? "forTown" : '', " ").concat(data.forAdults ? "forAdults" : '', " ").concat(data.forChildren ? "forChildren" : '', "\">\n  <div class=\"product-cards__imgbox\">\n    <div class=\"swiper js-product-card-swiper-minpic\">\n      <div class=\"swiper-wrapper js-swiper-wrapper\">\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"").concat(data.img[0], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"").concat(data.img[1] ? data.img[1] : data.img[0], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n        <div class=\"swiper-slide\">\n          <a class=\"product-cards__link-overlay\" href=\"#\">\n            <img class=\"product-cards__img\" src=\"").concat(data.img[2] ? data.img[2] : data.img[0], "\" alt=\"\u0421\u0430\u043C\u043E\u043A\u0430\u0442\">\n          </a>\n        </div>\n      </div>\n      <button class=\"swiper-button-prev js-min-pic-swiper-swiper-button-prev\"></button>\n      <button class=\"swiper-button-next js-min-pic-swiper-swiper-button-next\"></button>\n    </div>\n    ").concat(data.productShieldHit ? '<span class="product-cards__shield product-cards__shield--red">ХИТ</span>' : '', "\n    <span class=\"product-cards__svg-box\"></span>\n  </div>\n  <div class=\"product-cards__body\">\n    <h3 class=\"product-cards__title\">").concat(data.title, "</h3>\n    <div class=\"product-cards__info\">\n      <p class=\"product-cards__info-text product-cards__info-text--accum\">").concat(data.charge, "</p>\n      <p class=\"product-cards__info-text product-cards__info-text--power\">").concat(data.horsepower, " \u043B.\u0441</p>\n      <p class=\"product-cards__info-text product-cards__info-text--kmch\">").concat(data.speed, " \u043A\u043C/\u0447</p>\n      <p class=\"product-cards__info-text product-cards__info-text--timer\">").concat(data.chargeTime, " \u0447\u0430\u0441\u043E\u0432</p>\n    </div>\n    <div class=\"product-cards__actions\">\n      <div class=\"product-cards__inner\">\n        <span class=\"product-cards__price-actual\">").concat(data.actualPrice, " \u20BD</span>\n        <span class=\"product-cards__price-sale\">").concat(data.priceSale, " \u20BD</span>\n      </div>        \n        <div class=\"product-cards__buttons\">\n          <button class=\"product-cards__btn product-cards__btn--incart js-product-add-to-cart\"></button>\n          <button class=\"product-cards__btn product-cards__btn--like\"></button>\n        </div>\n    </div>\n    <button class=\"product-cards__button\">\u041A\u0443\u043F\u0438\u0442\u044C \u0432 1 \u043A\u043B\u0438\u043A</button>\n  </div>\n</div>\n  ");
+  };
 
   fetch('./db.json').then(function (response) {
     return response.json();
