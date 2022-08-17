@@ -7,7 +7,7 @@
     "chargeTime": 5,
     "actualPrice": 39000,
     "priceSale": 29000,
-    "img": ["/img/kugoo-m4-1.jpg","/img/kugoo-m4-2.jpg","/img/kugoo-m4-3.jpg"],
+    "img": ["img/kugoo-m4-1.jpg","img/kugoo-m4-2.jpg","img/kugoo-m4-3.jpg"],
     "productShieldHit": true,
     "forTown": true,
     "forAdults":false,
