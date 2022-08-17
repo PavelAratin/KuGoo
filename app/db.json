@@ -21,7 +21,7 @@
     "chargeTime": 5,
     "actualPrice": 54000,
     "priceSale": 50000,
-    "img": ["/img/kugoo-m4-pro-18-ah-1.jpg","/img/kugoo-m4-pro-18-ah-2.jpg","/img/kugoo-m4-pro-18-ah-3.jpg"],
+    "img": ["./img/kugoo-m4-pro-18-ah-1.jpg","/img/kugoo-m4-pro-18-ah-2.jpg","/img/kugoo-m4-pro-18-ah-3.jpg"],
     "productShieldHit": false,
     "forTown": true,
     "forAdults":true,
