@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -491,7 +492,7 @@ input[type=search]::-webkit-search-results-decoration {
   right: 10px;
   margin-top: 0;
   top: 17px;
-  background: url("../img/choice-arrow-down-black.svg");
+  background-image: url("../img/choice-arrow-down-black.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1171,6 +1172,7 @@ input[type=search]::-webkit-search-results-decoration {
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-gap: 30px;
   margin-bottom: 50px;
+  position: relative;
 }
 .product-cards__link-overlay {
   outline: 0;
@@ -3965,6 +3967,184 @@ input[type=search]::-webkit-search-results-decoration {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 18px 18px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs__item:not(:last-child) {
+  margin-right: 16px;
+  position: relative;
+}
+.breadcrumbs__item:not(:last-child)::before {
+  content: "/";
+  position: absolute;
+  top: -1px;
+  right: -12px;
+  color: #5d667b;
+}
+.breadcrumbs__item:first-child {
+  padding-left: 20px;
+  background-image: url("../img/home-pic.svg");
+  background-repeat: no-repeat;
+  background-position: left -1px;
+}
+.breadcrumbs__link {
+  font-size: 12px;
+  color: #5d667b;
+  line-height: 1.4;
+  position: relative;
+  transition: color 0.2s linear;
+}
+.breadcrumbs__link:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  bottom: -3px;
+  right: -3px;
+  background-color: #F4F7FB;
+  transform: scale(0);
+  transition: transform 0.2s linear;
+}
+.breadcrumbs__link:hover {
+  color: #008DE0;
+}
+.breadcrumbs__link:focus::before {
+  transform: scale(1);
+}
+.breadcrumbs__link:focus {
+  color: #008DE0;
+}
+.breadcrumbs__link-text {
+  position: relative;
+}
+
+.filter-page {
+  padding: 55px 0;
+}
+.filter-page__head, .filter-page__sort {
+  display: flex;
+  align-items: center;
+}
+.filter-page__head {
+  justify-content: space-between;
+}
+.filter-page__sort-text {
+  font-weight: 500;
+  font-size: 14px;
+  color: #282739;
+  margin-right: 20px;
+}
+.filter-page__filter-title {
+  font-weight: 500;
+  font-size: 18px;
+  color: #282739;
+  margin-bottom: 24px;
+}
+.filter-page .choices[data-type*=select-one]::after {
+  width: 7px;
+  height: 7px;
+  border: none;
+  right: 10px;
+  margin-top: 0;
+  top: 17px;
+  background-image: url("../img/select-arrow-blue-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.filter-page .choices.is-open[data-type*=select-one]::after {
+  transform: rotate(180deg);
+}
+.filter-page .choices__item {
+  color: #6F73EE;
+}
+.filter-page .choices__inner {
+  background-color: transparent;
+  border: 1px solid #6F73EE;
+  border-radius: 5px;
+}
+
+/*--стилизация фильтров--*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.filter {
+  width: 255px;
+  padding: 20px;
+  background-color: #F4F7FB;
+  border-radius: 10px;
+}
+
+.range-slider__slider {
+  margin-bottom: 22px;
+}
+.range-slider__inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.range-slider__input {
+  max-width: 80px;
+  padding: 5px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #EAEBED;
+  font-size: 16px;
+  color: #282739;
+  outline: none;
+  transition: box-shadow 0.2s linear;
+}
+.range-slider__input:hover {
+  box-shadow: 0 0 0 2px #6F73EE;
+}
+.range-slider__input:focus {
+  box-shadow: 0 0 0 2px #6F73EE;
+}
+.range-slider .noUi-handle {
+  border: none;
+  border-radius: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.range-slider .noUi-horizontal .noUi-handle {
+  border-radius: 100%;
+  background-color: #6F73EE;
+  width: 30px;
+  height: 30px;
+  top: -14px;
+}
+.range-slider .noUi-handle:after,
+.range-slider .noUi-handle:before {
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.range-slider .noUi-connect {
+  background-color: #6F73EE;
+}
+.range-slider .noUi-target {
+  background-color: #EAEBED;
+  border: none;
+  box-shadow: none;
+}
+.range-slider .noUi-horizontal {
+  height: 2px;
 }
 
 @media screen and (max-width: 1350px) {

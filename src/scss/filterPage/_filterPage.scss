@@ -1,0 +1,126 @@
+.filter-page{
+  padding: 55px 0;
+  &__head,
+  &__sort{
+    display: flex;
+    align-items: center;
+  }
+  &__head{
+    justify-content: space-between;
+  }
+  &__sort-text{
+    font-weight: 500;
+    font-size: 14px;
+    color: $colorBlack;
+    margin-right: 20px;
+  }
+  &__filter-title{
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorBlack;
+    margin-bottom: 24px;
+  }
+  .choices[data-type*=select-one]::after{
+    width: 7px;
+    height: 7px;
+    border: none;
+    right: 10px;
+    margin-top: 0;
+    top: 17px;
+    background-image: url('../img/select-arrow-blue-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .choices.is-open[data-type*=select-one]::after{
+    transform: rotate(180deg);
+  }
+  .choices__item{
+    color: $colorPurple;
+  }
+  .choices__inner{
+    background-color: transparent;
+    border: 1px solid $colorPurple;
+    border-radius: 5px;
+  }
+}
+/*--стилизация фильтров--*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.filter{
+  width: 255px;
+  padding: 20px;
+  background-color: $colorLavanda;
+  border-radius: 10px;
+}
+
+.range-slider{
+  &__slider{
+    margin-bottom: 22px;
+  }
+  &__inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__input{
+    max-width: 80px;
+    padding: 5px;
+    text-align: center;
+    background-color: $colorWhite;
+    border-radius: 5px;
+    border: 1px solid $colorBlueBledniVery;
+    font-size: 16px;
+    color: $colorBlack;
+    outline: none;
+    transition: box-shadow 0.2s linear;
+    &:hover{
+      box-shadow: 0 0 0 2px $colorPurple;
+    }
+    &:focus{
+      box-shadow: 0 0 0 2px $colorPurple;
+    }
+  }
+  .noUi-handle{
+    border: none;
+    border-radius: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .noUi-horizontal .noUi-handle{
+    border-radius: 100%;
+    background-color: $colorPurple;
+    width: 30px;
+    height: 30px;
+    top: -14px;
+  }
+  .noUi-handle:after,
+  .noUi-handle:before{
+    width: 14px;
+    height: 14px;
+    background-color: $colorWhite;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .noUi-connect{
+    background-color: $colorPurple;
+  }
+  .noUi-target{
+    background-color: $colorBlueBledniVery;
+    border: none;
+    box-shadow: none;
+  }
+  .noUi-horizontal{
+    height: 2px;
+  }
+}

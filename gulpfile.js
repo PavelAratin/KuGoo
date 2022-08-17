@@ -120,6 +120,11 @@ const dataBase = () =>{
   return src('./src/db.json')
   .pipe(dest('./app/'))
 }
+
+const noUiSlider = () =>{
+  return src('./src/noUiSlider/*')
+  .pipe(dest('./app/noUiSlider'))
+}
 //добавление сверх начальной сборки необходимых функций конец
 
 //функция для слежения за файлами 
@@ -151,9 +156,10 @@ exports.normalizeToApp = normalizeToApp;
 exports.joicesToApp = joicesToApp;
 exports.swiperToApp = swiperToApp;
 exports.dataBase = dataBase;
+exports.noUiSlider = noUiSlider;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts,joicesToApp,swiperToApp, fonts, imgToApp, svgSprites,dataBase), styles,normalizeToApp, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts,joicesToApp,swiperToApp, fonts, imgToApp, svgSprites,dataBase,noUiSlider), styles,normalizeToApp, watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
@@ -203,4 +209,4 @@ const tinypng = () => {
     .pipe(dest('./app/img'))
 }
 //dev-сборка
-exports.build = series(clean, parallel(htmlInclude, sciptsBuild,swiperToApp,joicesToApp, fonts, imgToApp, svgSprites,dataBase), stylesBuild,normalizeToApp, tinypng);
+exports.build = series(clean, parallel(htmlInclude, sciptsBuild,swiperToApp,joicesToApp, fonts, imgToApp, svgSprites,dataBase,noUiSlider), stylesBuild,normalizeToApp, tinypng);

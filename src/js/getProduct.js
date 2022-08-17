@@ -4,21 +4,22 @@ export function getProduct() {
   const productCardWrapper = document.querySelector('.js-product-cards');
   const buttonProductWievAll = document.querySelector('.js-product-set-viewall');
   const productSetButtons = document.querySelectorAll('.js-product-set-button');
-
-  productSetButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const currentBtn = btn.dataset.filter;
-      filter(currentBtn)
+  if (productSetButtons.length) {
+    productSetButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const currentBtn = btn.dataset.filter;
+        filter(currentBtn)
+      });
     });
-  });
+  }
 
   function filter(category) {
     const productCards = document.querySelectorAll('.js-product-card')
-    productCards.forEach(function(card){
+    productCards.forEach(function (card) {
       const itemFiltered = !card.classList.contains(category);
-      if(itemFiltered){
+      if (itemFiltered) {
         card.classList.add('hide')
-      }else{
+      } else {
         card.classList.remove('hide')
       }
     });
@@ -81,9 +82,11 @@ export function getProduct() {
     .then(body => {
       if (body) {
         for (let i = 0; i < 6; i++) {
-          productCardWrapper.innerHTML += createTemplate(body[i])
-          customeSwiper();
-          cart();
+          if (productCardWrapper) {
+            productCardWrapper.innerHTML += createTemplate(body[i])
+            customeSwiper();
+            cart();
+          }
         }
       }
     })
@@ -91,22 +94,24 @@ export function getProduct() {
       console.log(error)
     })
 
-  buttonProductWievAll.addEventListener('click', function () {
-    let visibleEl = productCardWrapper.children.length;
-    let counterEl = visibleEl + 3;
-    fetch('./db.json')
-      .then((response) => response.json())
-      .then((body) => {
-        if (body) {
-          for (let i = visibleEl; i < counterEl; i++) {
-            productCardWrapper.innerHTML += createTemplate(body[i])
-            customeSwiper();
-            cart();
+  if(buttonProductWievAll){
+    buttonProductWievAll.addEventListener('click', function () {
+      let visibleEl = productCardWrapper.children.length;
+      let counterEl = visibleEl + 3;
+      fetch('./db.json')
+        .then((response) => response.json())
+        .then((body) => {
+          if (body) {
+            for (let i = visibleEl; i < counterEl; i++) {
+              productCardWrapper.innerHTML += createTemplate(body[i])
+              customeSwiper();
+              cart();
+            }
+            if ((counterEl + 1) === body.length) {
+              this.style.display = 'none';
+            }
           }
-          if ((counterEl + 1) === body.length) {
-            this.style.display = 'none';
-          }
-        }
-      })
-  });
+        })
+    });
+  }
 }

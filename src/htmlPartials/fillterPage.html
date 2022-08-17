@@ -1,0 +1,33 @@
+<section class="filter-page">
+  <div class="container">
+    <div class="filter-page__head">
+      <h2 class="title-h2 filter-page__title">Фильтр</h2>
+      <div class="filter-page__sort">
+        <p class="filter-page__sort-text">Сортировать:</p>
+        <select name="filter-page-select" class="js-choice filter-page__select">
+          <option value="Везде">По цене</option>
+          <option value="Самокаты">По типу</option>
+          <option value="Аксессуары">По весу</option>
+        </select>
+        <select name="filter-page-select" class="js-choice filter-page__select">
+          <option value="Везде">По дальности хода</option>
+          <option value="Самокаты">По наличию сиденья</option>
+          <option value="Аксессуары">По мощности</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter-page__wrapper">
+      <div class="filter">
+        <div class="range-slider">
+          <p class="filter-page__filter-title">Цена</p>
+          <div class="range-slider__slider js-range-slider"></div>
+          <div class="range-slider__inputs">
+            <input class="range-slider__input js-range-input-0" type="number" placeholder="0">
+            <span>&mdash;</span>
+            <input class="range-slider__input js-range-input-1" type="number" placeholder="55 000">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
