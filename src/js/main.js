@@ -10,8 +10,9 @@ import { cart } from './cart';
 import { diagnosticAnimation } from './diagnosticAnimation';
 import { tabTitles } from './tabTitles';
 import { mapAnimate } from './mapAnimate';
-import {getProduct} from './getProduct';
-import {rangeSlider} from './rangeSlider';
+import { getProduct } from './getProduct';
+import { rangeSlider } from './rangeSlider';
+import { FixFilter } from './fixFilter';
 window.addEventListener('DOMContentLoaded', function () {
   joicesCustome();
   customeSwiper();
@@ -27,4 +28,5 @@ window.addEventListener('DOMContentLoaded', function () {
   mapAnimate();
   getProduct();
   rangeSlider();
+  FixFilter();
 });

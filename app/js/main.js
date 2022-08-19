@@ -404,6 +404,48 @@ function dropDownLestTel() {
 
 /***/ }),
 
+/***/ "./src/js/fixFilter.js":
+/*!*****************************!*\
+  !*** ./src/js/fixFilter.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FixFilter": () => (/* binding */ FixFilter)
+/* harmony export */ });
+function FixFilter() {
+  var filterBlock = document.querySelector('.js-filter');
+  var filterParent = document.querySelector('.js-filter-parent');
+  var filterOffsetTop = filterParent.offsetTop;
+  var smallOffset = 20;
+  var marginBottom = 50;
+  console.log(filterOffsetTop);
+
+  var fixedScrollFilter = function fixedScrollFilter() {
+    var scrollDistance = window.scrollY;
+    var scrollDistance2 = window.scrollY - filterOffsetTop;
+    var scrollDistancOnBlock = scrollDistance2 + filterBlock.offsetHeight + smallOffset;
+    var heightBlock = filterParent.offsetHeight - marginBottom;
+
+    if (scrollDistance > filterOffsetTop - smallOffset && scrollDistancOnBlock <= heightBlock) {
+      filterBlock.classList.add('fixed');
+    } else {
+      filterBlock.classList.remove('fixed');
+    }
+
+    if (scrollDistancOnBlock >= heightBlock) {
+      filterBlock.classList.add('absolute');
+    } else {
+      filterBlock.classList.remove('absolute');
+    }
+  };
+
+  window.addEventListener('scroll', fixedScrollFilter);
+}
+
+/***/ }),
+
 /***/ "./src/js/getProduct.js":
 /*!******************************!*\
   !*** ./src/js/getProduct.js ***!
@@ -871,6 +913,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mapAnimate__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./mapAnimate */ "./src/js/mapAnimate.js");
 /* harmony import */ var _getProduct__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./getProduct */ "./src/js/getProduct.js");
 /* harmony import */ var _rangeSlider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./rangeSlider */ "./src/js/rangeSlider.js");
+/* harmony import */ var _fixFilter__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./fixFilter */ "./src/js/fixFilter.js");
+
 
 
 
@@ -900,6 +944,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_mapAnimate__WEBPACK_IMPORTED_MODULE_11__.mapAnimate)();
   (0,_getProduct__WEBPACK_IMPORTED_MODULE_12__.getProduct)();
   (0,_rangeSlider__WEBPACK_IMPORTED_MODULE_13__.rangeSlider)();
+  (0,_fixFilter__WEBPACK_IMPORTED_MODULE_14__.FixFilter)();
 });
 })();
 

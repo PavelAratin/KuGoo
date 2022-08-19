@@ -648,4 +648,26 @@
   .development-plan__left{
     margin-bottom: 30px;
   }
+  .filter{
+    display: none;
+  }
+  .filter-page__cards{
+    max-width: 100%;
+    margin: 0;
+  }
+  .filter-page__title{
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .filter-page__sort-text{
+    margin-bottom: 10px;
+  }
+  .filter-page__sort{
+    .choices{
+      width: 100%;
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
